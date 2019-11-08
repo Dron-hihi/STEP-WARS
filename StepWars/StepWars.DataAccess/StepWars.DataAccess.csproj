@@ -59,6 +59,8 @@
     <Compile Include="Enitites\Kill.cs" />
     <Compile Include="Enitites\User.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Repository\Abstraction\IRepository.cs" />
+    <Compile Include="Repository\Implementation\EFRepository.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
