@@ -9,6 +9,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "StepWars.Server", "StepWars
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "StepWars.Client", "StepWars.Client", "{D391A092-9A7C-4A93-9ED9-E18490FE8B70}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StepWars.BusinessLogic", "StepWars.BusinessLogic\StepWars.BusinessLogic.csproj", "{F9399330-A1C5-4444-8FB9-6B2E81C0DED1}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -19,12 +21,17 @@ Global
 		{73A6BAB4-A329-467B-B209-DC09EAA28C10}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{73A6BAB4-A329-467B-B209-DC09EAA28C10}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{73A6BAB4-A329-467B-B209-DC09EAA28C10}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F9399330-A1C5-4444-8FB9-6B2E81C0DED1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F9399330-A1C5-4444-8FB9-6B2E81C0DED1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F9399330-A1C5-4444-8FB9-6B2E81C0DED1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F9399330-A1C5-4444-8FB9-6B2E81C0DED1}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{73A6BAB4-A329-467B-B209-DC09EAA28C10} = {3CC3AD04-E7E9-4815-89F1-04CBD79B046E}
+		{F9399330-A1C5-4444-8FB9-6B2E81C0DED1} = {3CC3AD04-E7E9-4815-89F1-04CBD79B046E}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {969310DE-CB65-4850-A996-8AE5872A2365}
