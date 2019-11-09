@@ -5,13 +5,11 @@ VisualStudioVersion = 15.0.28307.852
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StepWars.DataAccess", "StepWars.DataAccess\StepWars.DataAccess.csproj", "{73A6BAB4-A329-467B-B209-DC09EAA28C10}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "StepWars.Client", "StepWars.Client", "{A07FD412-C6C8-4EDE-97C9-0501812C9AE9}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "StepWars.Server", "StepWars.Server", "{3CC3AD04-E7E9-4815-89F1-04CBD79B046E}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "StepWars.Server", "StepWars.Server", "{7B29DD30-BAA0-4668-9718-301AF69D021D}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "StepWars.Client", "StepWars.Client", "{D391A092-9A7C-4A93-9ED9-E18490FE8B70}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "UserInterface", "UserInterface", "{C4DCFB71-3653-43DB-86B6-4ED2910F25A9}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WPF_User_Interface", "WPF_User_Interface\WPF_User_Interface.csproj", "{C315EBE4-6A5C-4A85-80AB-8BF2C4785AA0}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StepWars.BusinessLogic", "StepWars.BusinessLogic\StepWars.BusinessLogic.csproj", "{F9399330-A1C5-4444-8FB9-6B2E81C0DED1}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -23,18 +21,17 @@ Global
 		{73A6BAB4-A329-467B-B209-DC09EAA28C10}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{73A6BAB4-A329-467B-B209-DC09EAA28C10}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{73A6BAB4-A329-467B-B209-DC09EAA28C10}.Release|Any CPU.Build.0 = Release|Any CPU
-		{C315EBE4-6A5C-4A85-80AB-8BF2C4785AA0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{C315EBE4-6A5C-4A85-80AB-8BF2C4785AA0}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{C315EBE4-6A5C-4A85-80AB-8BF2C4785AA0}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{C315EBE4-6A5C-4A85-80AB-8BF2C4785AA0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F9399330-A1C5-4444-8FB9-6B2E81C0DED1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F9399330-A1C5-4444-8FB9-6B2E81C0DED1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F9399330-A1C5-4444-8FB9-6B2E81C0DED1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F9399330-A1C5-4444-8FB9-6B2E81C0DED1}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
-		{73A6BAB4-A329-467B-B209-DC09EAA28C10} = {7B29DD30-BAA0-4668-9718-301AF69D021D}
-		{C4DCFB71-3653-43DB-86B6-4ED2910F25A9} = {A07FD412-C6C8-4EDE-97C9-0501812C9AE9}
-		{C315EBE4-6A5C-4A85-80AB-8BF2C4785AA0} = {C4DCFB71-3653-43DB-86B6-4ED2910F25A9}
+		{73A6BAB4-A329-467B-B209-DC09EAA28C10} = {3CC3AD04-E7E9-4815-89F1-04CBD79B046E}
+		{F9399330-A1C5-4444-8FB9-6B2E81C0DED1} = {3CC3AD04-E7E9-4815-89F1-04CBD79B046E}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {969310DE-CB65-4850-A996-8AE5872A2365}
