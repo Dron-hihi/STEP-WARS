@@ -9,6 +9,10 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "StepWars.Client", "StepWars
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "StepWars.Server", "StepWars.Server", "{7B29DD30-BAA0-4668-9718-301AF69D021D}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "UserInterface", "UserInterface", "{C4DCFB71-3653-43DB-86B6-4ED2910F25A9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WPF_User_Interface", "WPF_User_Interface\WPF_User_Interface.csproj", "{C315EBE4-6A5C-4A85-80AB-8BF2C4785AA0}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -19,12 +23,18 @@ Global
 		{73A6BAB4-A329-467B-B209-DC09EAA28C10}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{73A6BAB4-A329-467B-B209-DC09EAA28C10}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{73A6BAB4-A329-467B-B209-DC09EAA28C10}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C315EBE4-6A5C-4A85-80AB-8BF2C4785AA0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C315EBE4-6A5C-4A85-80AB-8BF2C4785AA0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C315EBE4-6A5C-4A85-80AB-8BF2C4785AA0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C315EBE4-6A5C-4A85-80AB-8BF2C4785AA0}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{73A6BAB4-A329-467B-B209-DC09EAA28C10} = {7B29DD30-BAA0-4668-9718-301AF69D021D}
+		{C4DCFB71-3653-43DB-86B6-4ED2910F25A9} = {A07FD412-C6C8-4EDE-97C9-0501812C9AE9}
+		{C315EBE4-6A5C-4A85-80AB-8BF2C4785AA0} = {C4DCFB71-3653-43DB-86B6-4ED2910F25A9}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {969310DE-CB65-4850-A996-8AE5872A2365}
