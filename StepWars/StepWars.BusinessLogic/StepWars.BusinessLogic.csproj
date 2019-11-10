@@ -38,6 +38,7 @@
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
     <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.ServiceModel" />
     <Reference Include="System.Xml" />
@@ -63,6 +64,12 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Services\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\StepWars.Helpers\StepWars.Helpers.csproj">
+      <Project>{7a5a4f48-1215-4441-8ffb-7b03a408273b}</Project>
+      <Name>StepWars.Helpers</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
