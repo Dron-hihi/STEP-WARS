@@ -1,4 +1,6 @@
-﻿using System;
+﻿using StepWars.BusinessLogic.Clasess.DTO;
+using StepWars.BusinessLogic.Clasess.Internals;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -10,6 +12,7 @@ namespace StepWars.BusinessLogic.Contracts
     // Використовується для перерисовки картинки
     public interface IRedrawContract
     {
-
+        // DrawObjects - усі об'єкти на карті.PlayerInfo - інформація про гравця
+        void Redraw(List<DrawObjectDTO> DrawObjects,PlayerDTO playerInfo);
     }
 }

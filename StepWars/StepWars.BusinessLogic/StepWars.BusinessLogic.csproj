@@ -45,13 +45,16 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Clasess\DTO\BonusDTO.cs" />
+    <Compile Include="Clasess\DTO\DrawObjectDTO.cs" />
     <Compile Include="Clasess\DTO\PlayerDTO.cs" />
     <Compile Include="Clasess\DTO\StarShipDTO.cs" />
     <Compile Include="Clasess\Internals\Bonus.cs" />
+    <Compile Include="Clasess\Internals\DrawObject.cs" />
     <Compile Include="Clasess\Internals\Player.cs" />
     <Compile Include="Clasess\Internals\StarShip.cs" />
+    <Compile Include="Contracts\Duplex\INotificationsContract.cs" />
     <Compile Include="Contracts\IGameControllerContract.cs" />
-    <Compile Include="Contracts\IRedrawContract.cs" />
+    <Compile Include="Contracts\Duplex\IRedrawContract.cs" />
     <Compile Include="Contracts\IRegistrationContract.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
