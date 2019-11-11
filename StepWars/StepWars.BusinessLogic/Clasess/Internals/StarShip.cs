@@ -7,12 +7,12 @@ using System.Threading.Tasks;
 
 namespace StepWars.BusinessLogic.Clasess.Inline
 {
-    public class StarShip
+    public class StarShip : DrawObject
     {
         public string Name { get; set; }
         public int Damage { get; set; }
         public int Health { get; set; }
-        public string Image { get; set; }
+        public int Speed { get; set; }
         public Bonus Bonus { get; set; }
     }
 }

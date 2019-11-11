@@ -51,20 +51,26 @@
     <Compile Include="Clasess\DTO\StarShipDTO.cs" />
     <Compile Include="Clasess\Internals\Bonus.cs" />
     <Compile Include="Clasess\Internals\DrawObject.cs" />
+    <Compile Include="Clasess\Internals\Enemy.cs" />
     <Compile Include="Clasess\Internals\Player.cs" />
     <Compile Include="Clasess\Internals\StarShip.cs" />
+    <Compile Include="Clasess\Internals\UserCallbacks.cs" />
     <Compile Include="Contracts\Duplex\INotificationsContract.cs" />
     <Compile Include="Contracts\IGameControllerContract.cs" />
     <Compile Include="Contracts\Duplex\IRedrawContract.cs" />
+    <Compile Include="Contracts\IAddItemContract.cs" />
     <Compile Include="Contracts\IRegistrationContract.cs" />
+    <Compile Include="Managers\Abstraction\IManager.cs" />
+    <Compile Include="Managers\Implementation\GameManager.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Services\AddItemService.cs" />
+    <Compile Include="Services\GameControllerService.cs" />
+    <Compile Include="Services\RegistrationService.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Services\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <ProjectReference Include="..\StepWars.Helpers\StepWars.Helpers.csproj">
       <Project>{7a5a4f48-1215-4441-8ffb-7b03a408273b}</Project>

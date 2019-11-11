@@ -11,7 +11,10 @@ namespace StepWars.BusinessLogic.Contracts
     // Контракт, який відповідає за реєстрацію нового гравця
     public interface IRegistrationContract
     {
-        // Функція, яка повертає всі кораблі для вибору
+        /// <summary>
+        ///  Функція, яка повертає всі кораблі для вибору
+        /// </summary>
+        /// <returns></returns>
         List<StarShipDTO> GetAllShips();
         // Функція, яка перевіряє чи вже є гравець з таким самим ніком в грі
         bool CheckToUserExist(string nickName);

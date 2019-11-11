@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace StepWars.BusinessLogic.Clasess.Internals
+namespace StepWars.BusinessLogic.Clasess.DTO
 {
     public class BonusDTO
     {
