@@ -13,7 +13,7 @@ using System.Threading.Tasks;
 
 namespace StepWars.BusinessLogic.Services
 {
-
+    [ServiceBehavior(ConcurrencyMode = ConcurrencyMode.Multiple,InstanceContextMode = InstanceContextMode.Single)]
     public class GameControllerService : IGameControllerContract
     {
         IManager gameManager = new GameManager(1024,768);

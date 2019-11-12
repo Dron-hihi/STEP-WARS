@@ -16,12 +16,16 @@ namespace StepWars.BusinessLogic.Contracts
     public interface IGameControllerContract
     {
         // Додає нового гравця в гру
+        [OperationContract(IsOneWay = true)]
         void AddNewPlayer(PlayerDTO player);
         // Рухає персонажа
+        [OperationContract(IsOneWay = true)]
         void MovePlayer(PlayerDTO player, MoveDirection direction);
         // Стрільба
+        [OperationContract(IsOneWay = true)]
         void Shoot(PlayerDTO player);
         // Видаляє гравця з гри
+        [OperationContract(IsOneWay = true)]
         void RemovePlayer(PlayerDTO player);
     }
 }

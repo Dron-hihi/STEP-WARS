@@ -1,6 +1,6 @@
 ﻿namespace StepWars.DataAccess.Context
 {
-    using StepWars.DataAccess.Entities;
+    using StepWars.DataAccess.Enitites;
     using System;
     using System.Data.Entity;
     using System.Linq;
@@ -14,6 +14,7 @@
         public DbSet<User> Users { get; set; }
         public DbSet<Enemy> Enemies { get; set; }
         public DbSet<Kill> Kills { get; set; }
+        public DbSet<StarShip> StarShips { get; set; }
     }
 
 }
