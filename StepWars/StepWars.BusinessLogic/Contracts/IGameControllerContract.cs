@@ -1,4 +1,5 @@
-﻿using StepWars.BusinessLogic.Clasess.Internals;
+﻿using StepWars.BusinessLogic.Clasess.DTO;
+using StepWars.BusinessLogic.Clasess.Internals;
 using System;
 using System.Collections.Generic;
 using System.Linq;

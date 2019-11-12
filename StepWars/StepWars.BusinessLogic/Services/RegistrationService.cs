@@ -1,4 +1,4 @@
-﻿using StepWars.BusinessLogic.Clasess.Inline;
+﻿using StepWars.BusinessLogic.Clasess.DTO;
 using StepWars.BusinessLogic.Clasess.Internals;
 using StepWars.BusinessLogic.Contracts;
 using System;
@@ -10,7 +10,7 @@ using System.Threading.Tasks;
 namespace StepWars.BusinessLogic.Services
 {
     public class RegistrationService : IRegistrationContract
-    {
+    {        
         public bool CheckToAdminPassword(string password)
         {
             throw new NotImplementedException();

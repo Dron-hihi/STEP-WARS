@@ -38,12 +38,12 @@ namespace StepWars.BusinessLogic.Managers
 
 
 
-        public GameManager(int _widht,int _height)
+        public GameManager(int _widht, int _height)
         {
             width = _widht;
             height = _height;
 
-            Task.Run(() => { RedrawCycle(); } );
+            Task.Run(() => { RedrawCycle(); });
         }
 
         public bool ConnectPlayer(UserCallbacks user)
@@ -64,7 +64,7 @@ namespace StepWars.BusinessLogic.Managers
 
                 do
                 {
-                } while (Spawn(user.Player.Ship, xPos, yPos));                               
+                } while (Spawn(user.Player.Ship, xPos, yPos));
             }
 
 
@@ -73,8 +73,56 @@ namespace StepWars.BusinessLogic.Managers
 
         public void Move(Player player, MoveDirection direction)
         {
-            throw new NotImplementedException();
-        }       
+            DrawObject playerShip;
+            playerShip = players.FirstOrDefault(x => x.Player.NickName == player.NickName).Player.Ship;
+
+            var collisionObject = CheckToIntersect(playerShip);
+            if (collisionObject != null)
+            {
+                switch (collisionObject.Tag)
+                {
+                    case DrawObjectTags.PLAYER:
+                        {
+                            return;
+                        }
+                    case DrawObjectTags.ENEMY:
+                        {
+                            var userCallback = players.FirstOrDefault(x => x.Player.Ship.Name == (playerShip as StarShip).Name);
+                            RemovePlayer(userCallback);
+                            break;
+                        }                    
+                }
+            }
+
+            if (direction == MoveDirection.Down)
+            {
+                if (playerShip.Y_Pos <= height)
+                    return;                
+
+                playerShip.Y_Pos -= (playerShip as StarShip).Speed;
+            }
+            else if (direction == MoveDirection.Up)
+            {
+                if (playerShip.Y_Pos >= height)
+                    return;
+
+                playerShip.Y_Pos += (playerShip as StarShip).Speed;
+            }
+            else if (direction == MoveDirection.Left)
+            {
+                if (playerShip.X_Pos <= width)
+                    return;
+
+                playerShip.X_Pos -= (playerShip as StarShip).Speed;
+            }
+            else if (direction == MoveDirection.Right)
+            {
+                if (playerShip.X_Pos >= width)
+                    return;
+
+                playerShip.X_Pos += (playerShip as StarShip).Speed;
+            }
+        }
 
         public void Shoot(Player player)
         {
@@ -88,7 +136,7 @@ namespace StepWars.BusinessLogic.Managers
                 players.Remove(user);
                 drawObjects.Remove(user.Player.Ship);
                 user.NotificationsContract.EndGameNotification();
-            }         
+            }
         }
 
 
@@ -100,7 +148,7 @@ namespace StepWars.BusinessLogic.Managers
         /// <param name="x"></param>
         /// <param name="y"></param>
         /// <returns></returns>
-        private bool Spawn(DrawObject Object,int x,int y)
+        private bool Spawn(DrawObject Object, int x, int y)
         {
             Object.X_Pos = x;
             Object.Y_Pos = y;
@@ -121,7 +169,7 @@ namespace StepWars.BusinessLogic.Managers
         {
             foreach (var obj in drawObjects)
             {
-                if(Object.CollisionRectangle.IntersectsWith(obj.CollisionRectangle))
+                if (Object.CollisionRectangle.IntersectsWith(obj.CollisionRectangle))
                 {
                     return obj;
                 }
@@ -173,11 +221,11 @@ namespace StepWars.BusinessLogic.Managers
 
 
                         player.RedrawContract.Redraw(ships, _player);
-                    }                        
+                    }
                 }
                 Thread.Sleep(1000 / fps);
             }
-            
-        }       
+
+        }
     }
 }

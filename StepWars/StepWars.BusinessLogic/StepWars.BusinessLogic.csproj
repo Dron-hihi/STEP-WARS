@@ -51,6 +51,7 @@
     <Compile Include="Clasess\DTO\StarShipDTO.cs" />
     <Compile Include="Clasess\Internals\Bonus.cs" />
     <Compile Include="Clasess\Internals\DrawObject.cs" />
+    <Compile Include="Clasess\Internals\DrawObjectTags.cs" />
     <Compile Include="Clasess\Internals\Enemy.cs" />
     <Compile Include="Clasess\Internals\Player.cs" />
     <Compile Include="Clasess\Internals\StarShip.cs" />

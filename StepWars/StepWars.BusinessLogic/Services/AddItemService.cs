@@ -1,4 +1,5 @@
-﻿using StepWars.BusinessLogic.Clasess.Inline;
+﻿using StepWars.BusinessLogic.Clasess.DTO;
+using StepWars.BusinessLogic.Clasess.Inline;
 using StepWars.BusinessLogic.Contracts;
 using System;
 using System.Collections.Generic;
