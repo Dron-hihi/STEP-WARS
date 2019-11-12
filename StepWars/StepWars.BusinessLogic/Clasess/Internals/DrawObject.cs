@@ -10,8 +10,9 @@ namespace StepWars.BusinessLogic.Clasess.Internals
     public abstract class DrawObject
     {
         public string Image { get; set; }
+        public string Tag { get; set; }
         public int X_Pos { get; set; }
         public int Y_Pos { get; set; }
-        public Rectangle MyProperty { get; set; }
+        public Rectangle CollisionRectangle { get; set; }
     }
 }

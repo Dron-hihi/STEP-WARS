@@ -11,8 +11,13 @@ using System.Threading.Tasks;
 
 namespace StepWars.BusinessLogic.Managers
 {
+
+    /// <summary>
+    /// Менеджер відповідає за серверну частину гри
+    /// </summary>
     public class GameManager : IManager
     {
+        // Усі гравці
         private List<UserCallbacks> players = new List<UserCallbacks>();
 
         private int maxPlayers = 3;
@@ -21,6 +26,7 @@ namespace StepWars.BusinessLogic.Managers
 
         private int fps = 60;
 
+        // Усі об'єкти на карті
         private List<DrawObject> drawObjects = new List<DrawObject>();
 
         private List<Bonus> bonuses;
@@ -29,6 +35,7 @@ namespace StepWars.BusinessLogic.Managers
         private Bonus currentBonus;
 
         private object locker;
+
 
 
         public GameManager(int _widht,int _height)
@@ -50,7 +57,14 @@ namespace StepWars.BusinessLogic.Managers
             // Spawn
             lock (locker)
             {
+                int xPos, yPos;
+                xPos = (width / 3) / 2;
+                yPos = height / (maxPlayers - (players.Count - 1));
 
+
+                do
+                {
+                } while (Spawn(user.Player.Ship, xPos, yPos));                               
             }
 
 
@@ -79,6 +93,56 @@ namespace StepWars.BusinessLogic.Managers
 
 
 
+        /// <summary>
+        /// Спавнить о'бєкт на карті з вказаними координатами
+        /// </summary>
+        /// <param name="Object"></param>
+        /// <param name="x"></param>
+        /// <param name="y"></param>
+        /// <returns></returns>
+        private bool Spawn(DrawObject Object,int x,int y)
+        {
+            Object.X_Pos = x;
+            Object.Y_Pos = y;
+
+            if (CheckToIntersect(Object) != null)
+                return false;
+
+            drawObjects.Add(Object);
+            return true;
+        }
+
+        /// <summary>
+        /// Повертає об'єкт з яким відбулася колізія
+        /// </summary>
+        /// <param name="Object"></param>
+        /// <returns></returns>
+        private DrawObject CheckToIntersect(DrawObject Object)
+        {
+            foreach (var obj in drawObjects)
+            {
+                if(Object.CollisionRectangle.IntersectsWith(obj.CollisionRectangle))
+                {
+                    return obj;
+                }
+            }
+
+
+            return null;
+        }
+
+        /// <summary>
+        /// Видаляє об'єкт з карти
+        /// </summary>
+        /// <param name="Object"></param>
+        private void RemoveObject(DrawObject Object)
+        {
+            drawObjects.Remove(Object);
+        }
+
+        /// <summary>
+        /// Цикл, який постійно відправляє картинку користувачу
+        /// </summary>
         private void RedrawCycle()
         {
             while (true)
@@ -111,8 +175,7 @@ namespace StepWars.BusinessLogic.Managers
                         player.RedrawContract.Redraw(ships, _player);
                     }                        
                 }
-
-                Thread.Sleep(1000/fps);
+                Thread.Sleep(1000 / fps);
             }
             
         }       
