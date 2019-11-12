@@ -1,6 +1,6 @@
 ﻿namespace StepWars.DataAccess.Context
 {
-    using StepWars.DataAccess.Entities;
+    using StepWars.DataAccess.Enitites;
     using System;
     using System.Data.Entity;
     using System.Linq;
