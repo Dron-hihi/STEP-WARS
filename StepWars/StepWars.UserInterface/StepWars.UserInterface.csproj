@@ -71,9 +71,20 @@
     <Compile Include="Views\AdminPanel.xaml.cs">
       <DependentUpon>AdminPanel.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Views\ExitGameStatistic.xaml.cs">
+      <DependentUpon>ExitGameStatistic.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Views\ShipSelect.xaml.cs">
       <DependentUpon>ShipSelect.xaml</DependentUpon>
     </Compile>
+    <Compile Include="VM\BaseEntityVM.cs" />
+    <Compile Include="VM\EnemyVM.cs" />
+    <Compile Include="VM\KillVM.cs" />
+    <Compile Include="VM\UserVM.cs" />
+    <Page Include="Views\ExitGameStatistic.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Views\MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>

@@ -1,4 +1,5 @@
 ﻿using MahApps.Metro.Controls;
+using StepWars.GameEngine;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -12,6 +13,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using WPF_User_Interface.Views;
 
 namespace UserInterface
 {
@@ -27,8 +29,16 @@ namespace UserInterface
 
         private void Battle_Start(object sender, RoutedEventArgs e)
         {
-            MessageBox.Show("Open Win Forms");
+            StepWars.GameEngine.StepWars form = new StepWars.GameEngine.StepWars();
+            form.FormClosing += Form_FormClosing;
+            form.ShowDialog();
             this.Close();
+        }
+
+        private void Form_FormClosing(object sender, System.Windows.Forms.FormClosingEventArgs e)
+        {
+            ExitGameStatistic exitGameStatistic = new ExitGameStatistic();
+            exitGameStatistic.Show();
         }
     }
 }

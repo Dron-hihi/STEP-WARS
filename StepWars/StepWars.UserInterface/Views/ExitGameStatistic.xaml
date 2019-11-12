@@ -1,0 +1,31 @@
+﻿<Controls:MetroWindow x:Class="WPF_User_Interface.Views.ExitGameStatistic"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WPF_User_Interface.Views"
+        xmlns:Controls="clr-namespace:MahApps.Metro.Controls;assembly=MahApps.Metro"
+        mc:Ignorable="d"
+        Title="Step Wars - > Statistic" Height="600" Width="400" ResizeMode="NoResize">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition></RowDefinition>
+            <RowDefinition Height="50"></RowDefinition>
+            <RowDefinition Height="50"></RowDefinition>
+        </Grid.RowDefinitions>
+        <ListBox Grid.Row="0" Margin="2">
+            <Border Margin="2" BorderThickness="1" BorderBrush="Green" CornerRadius="2">
+                <TextBlock></TextBlock>
+            </Border>
+        </ListBox>
+        <Grid Grid.Row="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <TextBox Grid.Column="0" Margin="2"></TextBox>
+            <TextBox Grid.Column="1" Margin="2"></TextBox>
+        </Grid>
+        <Button Grid.Row="2" Margin="2" Click="OFF"> EXIT</Button>
+    </Grid>
+</Controls:MetroWindow>
