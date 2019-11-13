@@ -9,10 +9,13 @@ using System.Threading.Tasks;
 namespace StepWars.BusinessLogic.Contracts
 {
     // Контракт відповідає за усі картинки
-    [ServiceContract(]
+    [ServiceContract]
     public interface IAddItemContract
     {
         [OperationContract(IsOneWay = true)]
         void AddNewStarShip(StarShipDTO starShip);
+
+        [OperationContract(IsOneWay = true)]
+        void RemoveStarShip(StarShipDTO starShip);
     }
 }

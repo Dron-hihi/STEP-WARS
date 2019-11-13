@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace StepWars.DataAccess.Enitites
 {
-    public class StarShip
+    public class StarShip : BaseEntity
     {
         public string Name { get; set; }
         public int Damage { get; set; }
