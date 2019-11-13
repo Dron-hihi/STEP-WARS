@@ -16,6 +16,6 @@ namespace StepWars.BusinessLogic.Clasess.DTO
         [DataMember] public int Damage { get; set; }
         [DataMember] public int Health { get; set; }
         [DataMember] public int Speed { get; set; }
-        [DataMember] public BonusDTO Bonus { get; set; }
+        [DataMember] public BonusDTO Bonus { get; set; }        
     }
 }

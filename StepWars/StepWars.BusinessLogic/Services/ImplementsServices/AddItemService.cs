@@ -33,6 +33,7 @@ namespace StepWars.BusinessLogic.Services
                 Name = starShip.Name,
                 Damage = starShip.Damage,
                 Health = starShip.Health,
+                Image = starShip.Image,
                 Speed = starShip.Speed
             });
         }
@@ -45,11 +46,12 @@ namespace StepWars.BusinessLogic.Services
             }))
                 return;
 
-            service.AddStarShip(new StarShip()
+            service.RemoveShip(new StarShip()
             {
                 Name = starShip.Name,
                 Damage = starShip.Damage,
                 Health = starShip.Health,
+                Image = starShip.Image,
                 Speed = starShip.Speed
             });
         }

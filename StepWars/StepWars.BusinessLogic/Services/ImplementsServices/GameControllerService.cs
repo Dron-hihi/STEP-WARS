@@ -32,6 +32,7 @@ namespace StepWars.BusinessLogic.Services
                         Damage = player.Ship.Damage,
                         Health = player.Ship.Health,
                         Speed = player.Ship.Speed,
+                        Image = player.Ship.Image,
                         Bonus = new Bonus() {
                             Duration = player.Ship.Bonus.Duration,
                             Image = player.Ship.Bonus.Image
@@ -54,6 +55,7 @@ namespace StepWars.BusinessLogic.Services
                     Damage = player.Ship.Damage,
                     Health = player.Ship.Health,
                     Speed = player.Ship.Speed,
+                    Image = player.Ship.Image,
                     Bonus = new Bonus()
                     {
                         Duration = player.Ship.Bonus.Duration,
@@ -80,6 +82,7 @@ namespace StepWars.BusinessLogic.Services
                         Damage = player.Ship.Damage,
                         Health = player.Ship.Health,
                         Speed = player.Ship.Speed,
+                        Image = player.Ship.Image,
                         Bonus = new Bonus()
                         {
                             Duration = player.Ship.Bonus.Duration,
@@ -103,6 +106,7 @@ namespace StepWars.BusinessLogic.Services
                     Damage = player.Ship.Damage,
                     Health = player.Ship.Health,
                     Speed = player.Ship.Speed,
+                    Image = player.Ship.Image,
                     Bonus = new Bonus()
                     {
                         Duration = player.Ship.Bonus.Duration,
