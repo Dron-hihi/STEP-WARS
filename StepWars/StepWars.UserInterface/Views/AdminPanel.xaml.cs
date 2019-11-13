@@ -12,7 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 using MahApps.Metro.Controls;
-
+using WPF_User_Interface.ServiceReference;
 
 namespace UserInterface
 {
@@ -63,9 +63,20 @@ namespace UserInterface
             SPE = Convert.ToInt32((sender as Slider).Value);
         }
 
-        private void ADD_Ship()
+        private void Add_Ship()
         {
+            StarShipDTO ship = new StarShipDTO();
 
+            ship.Name = ShipName;
+            ship.Damage = DMG;
+            ship.Health = HP;
+            ship.Speed = SPE;
+            
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            Add_Ship();
         }
     }
 }
