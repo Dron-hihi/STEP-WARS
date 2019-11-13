@@ -69,6 +69,7 @@ namespace StepWars.BusinessLogic.Services
                     Damage = ship.Damage,
                     Name = ship.Name,
                     Health = ship.Health,
+                    Image = ship.Image,
                     Speed = ship.Speed
                     
                 });
