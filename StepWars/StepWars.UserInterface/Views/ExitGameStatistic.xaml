@@ -6,18 +6,22 @@
         xmlns:local="clr-namespace:WPF_User_Interface.Views"
         xmlns:Controls="clr-namespace:MahApps.Metro.Controls;assembly=MahApps.Metro"
         mc:Ignorable="d"
-        Title="Step Wars - > Statistic" Height="600" Width="400" ResizeMode="NoResize">
+        Title="Step Wars - > Statistic" Height="155" Width="400" ResizeMode="NoResize">
     <Grid>
         <Grid.RowDefinitions>
-            <RowDefinition></RowDefinition>
-            <RowDefinition Height="50"></RowDefinition>
-            <RowDefinition Height="50"></RowDefinition>
+            <RowDefinition Height="auto"></RowDefinition>
+            <RowDefinition Height="auto"></RowDefinition>
+            <RowDefinition Height="auto"></RowDefinition>
+            <RowDefinition Height="auto"></RowDefinition>
         </Grid.RowDefinitions>
-        <ListBox Grid.Row="0" Margin="2">
-            <Border Margin="2" BorderThickness="1" BorderBrush="Green" CornerRadius="2">
-                <TextBlock></TextBlock>
-            </Border>
-        </ListBox>
+        <Grid Grid.Row="0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <TextBox Grid.Column="0" Margin="2"></TextBox>
+            <TextBox Grid.Column="1" Margin="2"></TextBox>
+        </Grid>
         <Grid Grid.Row="1">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition></ColumnDefinition>
@@ -26,6 +30,14 @@
             <TextBox Grid.Column="0" Margin="2"></TextBox>
             <TextBox Grid.Column="1" Margin="2"></TextBox>
         </Grid>
-        <Button Grid.Row="2" Margin="2" Click="OFF"> EXIT</Button>
+        <Grid Grid.Row="2">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <TextBox Grid.Column="0" Margin="2"></TextBox>
+            <TextBox Grid.Column="1" Margin="2"></TextBox>
+        </Grid>
+        <Button Grid.Row="3" Margin="2" Click="OFF"> EXIT</Button>
     </Grid>
 </Controls:MetroWindow>
