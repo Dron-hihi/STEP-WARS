@@ -15,5 +15,4 @@ namespace StepWars.DataAccess.Context
         public DbSet<Enemy> Enemies { get; set; }
         public DbSet<Kill> Kills { get; set; }
     }
-
 }
