@@ -129,6 +129,16 @@ namespace StepWars.BusinessLogic.Managers
 
                 playerShip.X_Pos += (playerShip as StarShip).Speed;
             }
+
+            var playerDrawObject = drawObjects.FirstOrDefault(x => x.X_Pos == player.Ship.X_Pos && x.Y_Pos == player.Ship.Y_Pos);
+
+            playerDrawObject.CollisionRectangle = new Rectangle()
+            {
+                Width = playerShip.CollisionRectangle.Width,
+                Height = playerShip.CollisionRectangle.Height,
+                X = playerShip.X_Pos,
+                Y = playerShip.Y_Pos
+            };
         }
 
         public void Shoot(Player player)
@@ -182,9 +192,11 @@ namespace StepWars.BusinessLogic.Managers
             Object.CollisionRectangle = new Rectangle()
             {
                 Width = Object.Image.StringToImage().Width,
-                Height = Object.Image.StringToImage().Height
+                Height = Object.Image.StringToImage().Height,
+                X = x,
+                Y = y
             };
-
+            
 
             drawObjects.Add(Object);
             return true;

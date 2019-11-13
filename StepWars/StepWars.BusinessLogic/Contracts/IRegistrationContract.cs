@@ -17,6 +17,7 @@ namespace StepWars.BusinessLogic.Contracts
         ///  Функція, яка повертає всі кораблі для вибору
         /// </summary>
         /// <returns></returns>
+        [OperationContract]
         List<StarShipDTO> GetAllShips();
         // Функція, яка перевіряє чи вже є гравець з таким самим ніком в грі
         bool CheckToUserExist(string nickName);
