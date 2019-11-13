@@ -10,11 +10,20 @@ using System.Windows.Forms;
 
 namespace StepWars.GameEngine
 {
-    public partial class Form1 : Form
+    public partial class StepWars : Form
     {
-        public Form1()
+        public StepWars()
         {
             InitializeComponent();
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
+        }
+        private void ExitGame(object sender, EventArgs e)
+        {
+            
         }
     }
 }

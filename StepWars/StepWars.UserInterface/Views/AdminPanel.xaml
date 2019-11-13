@@ -34,7 +34,7 @@
                 <ImageBrush ImageSource="{Binding ElementName=ADDShip_Ico, Path=Text}"/>
             </Border.Background>
         </Border>
-        <TextBlock Grid.Column="0" Grid.Row="4" Grid.ColumnSpan="2" TextAlignment="Center" Margin="2" FontSize="15" Foreground="Red">Damege</TextBlock>
+        <TextBlock Grid.Column="0" Grid.Row="4" Grid.ColumnSpan="2" TextAlignment="Center" Margin="2" FontSize="15" Foreground="Red">Damage</TextBlock>
         <Slider Grid.Column="0" Grid.Row="5" Grid.ColumnSpan="2" Margin="2"></Slider>
         <TextBlock Grid.Column="0" Grid.Row="6" Grid.ColumnSpan="2" TextAlignment="Center" Margin="2" FontSize="15" Foreground="Green">HP</TextBlock>
         <Slider Grid.Column="0" Grid.Row="7" Grid.ColumnSpan="2" Margin="2"></Slider>

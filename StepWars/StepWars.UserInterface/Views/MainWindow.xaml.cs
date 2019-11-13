@@ -30,9 +30,6 @@ namespace UserInterface
 
         private void Start_Gamer_Admin(object sender, RoutedEventArgs e)
         {
-        //    Form1 form = new Form1();
-        //    form.ShowDialog();
-
             if (RB_Gamer.IsChecked == true)
             {
                 if (TB_NickName.Text != "")
