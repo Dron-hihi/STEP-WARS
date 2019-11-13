@@ -18,7 +18,7 @@ namespace StepWars.BusinessLogic.Services
     [ServiceBehavior(ConcurrencyMode = ConcurrencyMode.Multiple, InstanceContextMode = InstanceContextMode.Single)]
     public class AddItemService : IAddItemContract
     {
-        private DAL_Service service = new DAL_Service(new EFRepository<StepWars.DataAccess.Enitites.StarShip>(new GameDBContext()));
+        private DAL_ShipService service = new DAL_ShipService(new EFRepository<StepWars.DataAccess.Enitites.StarShip>(new GameDBContext()));
 
         public void AddNewStarShip(StarShipDTO starShip)
         {

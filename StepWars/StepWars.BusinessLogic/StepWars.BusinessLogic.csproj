@@ -61,6 +61,7 @@
     <Compile Include="Clasess\DTO\PlayerDTO.cs" />
     <Compile Include="Clasess\DTO\StarShipDTO.cs" />
     <Compile Include="Clasess\Internals\Bonus.cs" />
+    <Compile Include="Clasess\Internals\Bullet.cs" />
     <Compile Include="Clasess\Internals\DrawObject.cs" />
     <Compile Include="Clasess\Internals\DrawObjectTags.cs" />
     <Compile Include="Clasess\Internals\Enemy.cs" />
@@ -75,10 +76,11 @@
     <Compile Include="Managers\Abstraction\IManager.cs" />
     <Compile Include="Managers\Implementation\GameManager.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Services\AddItemService.cs" />
-    <Compile Include="Services\DAL_Service.cs" />
-    <Compile Include="Services\GameControllerService.cs" />
-    <Compile Include="Services\RegistrationService.cs" />
+    <Compile Include="Services\DAL_Services\DAL_UserService.cs" />
+    <Compile Include="Services\ImplementsServices\AddItemService.cs" />
+    <Compile Include="Services\DAL_Services\DAL_ShipService.cs" />
+    <Compile Include="Services\ImplementsServices\GameControllerService.cs" />
+    <Compile Include="Services\ImplementsServices\RegistrationService.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

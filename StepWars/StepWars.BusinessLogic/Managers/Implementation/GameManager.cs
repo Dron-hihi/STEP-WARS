@@ -2,8 +2,12 @@
 using StepWars.BusinessLogic.Clasess.Internals;
 using StepWars.BusinessLogic.Contracts;
 using StepWars.BusinessLogic.Managers.Abstraction;
+using StepWars.BusinessLogic.Services.DAL_Services;
+using StepWars.DataAccess.Repository.Implementation;
+using StepWars.Helpers.Extentions;
 using System;
 using System.Collections.Generic;
+using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading;
@@ -35,6 +39,8 @@ namespace StepWars.BusinessLogic.Managers
         private Bonus currentBonus;
 
         private object locker;
+        DAL_UserService userService = new DAL_UserService(new EFRepository<StepWars.DataAccess.Enitites.User>(new StepWars.DataAccess.Context.GameDBContext()));
+
 
 
 
@@ -61,6 +67,7 @@ namespace StepWars.BusinessLogic.Managers
                 xPos = (width / 3) / 2;
                 yPos = height / (maxPlayers - (players.Count - 1));
 
+                userService.AddNewUser(user.Player);
 
                 do
                 {
@@ -134,12 +141,13 @@ namespace StepWars.BusinessLogic.Managers
             lock (locker)
             {
                 players.Remove(user);
+                userService.RemoveUser(user.Player);
                 drawObjects.Remove(user.Player.Ship);
                 user.NotificationsContract.EndGameNotification();
             }
         }
 
-
+            
 
         /// <summary>
         /// Спавнить о'бєкт на карті з вказаними координатами
@@ -153,8 +161,30 @@ namespace StepWars.BusinessLogic.Managers
             Object.X_Pos = x;
             Object.Y_Pos = y;
 
+
             if (CheckToIntersect(Object) != null)
                 return false;
+
+
+            if(Object is Player)
+            {
+                Object.Tag = DrawObjectTags.PLAYER;
+            }
+            else if (Object is Enemy)
+            {
+                Object.Tag = DrawObjectTags.ENEMY;
+            }
+            else if(Object is Bullet)
+            {
+                Object.Tag = DrawObjectTags.BULLET;
+            }
+
+            Object.CollisionRectangle = new Rectangle()
+            {
+                Width = Object.Image.StringToImage().Width,
+                Height = Object.Image.StringToImage().Height
+            };
+
 
             drawObjects.Add(Object);
             return true;

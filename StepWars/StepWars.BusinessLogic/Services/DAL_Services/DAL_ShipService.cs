@@ -10,11 +10,11 @@ namespace StepWars.BusinessLogic.Services
     /// <summary>
     /// Сука, падла 3 часа ночі, як же я заїбався.
     /// </summary>
-    public class DAL_Service
+    public class DAL_ShipService
     {
         private readonly IRepository<StepWars.DataAccess.Enitites.StarShip> repository;
 
-        public DAL_Service(IRepository<StepWars.DataAccess.Enitites.StarShip> repos)
+        public DAL_ShipService(IRepository<StepWars.DataAccess.Enitites.StarShip> repos)
         {
             repository = repos;
         }
@@ -46,14 +46,33 @@ namespace StepWars.BusinessLogic.Services
         /// <param name="starShip"></param>
         public void AddStarShip(StepWars.BusinessLogic.Clasess.Internals.StarShip starShip)
         {
-            StepWars.DataAccess.Enitites.StarShip ship = new DataAccess.Enitites.StarShip();
+            if (!CheckToExist(starShip))
+                return;
 
-            ship.Name = starShip.Name;
-            ship.Damage = starShip.Damage;
-            ship.Health = starShip.Health;
-            ship.Speed = starShip.Speed;
+            repository.Add(new DataAccess.Enitites.StarShip()
+            {
+                Name = starShip.Name,
+                Damage = starShip.Damage,
+                Health = starShip.Health,
+                Speed = starShip.Speed
+            });
+        }
 
-            repository.Add(ship);
+        /// <summary>
+        /// Видаляє корабель з бази данних
+        /// </summary>
+        /// <param name="starShip"></param>
+        public void RemoveShip(StepWars.BusinessLogic.Clasess.Internals.StarShip starShip)
+        {
+            repository.Remove(repository.GetAll().FirstOrDefault(x => x.Name == starShip.Name));
+        }
+
+        private bool CheckToExist(StepWars.BusinessLogic.Clasess.Internals.StarShip starShip)
+        {
+            if (repository.GetAll().FirstOrDefault(x => x.Name == starShip.Name) != null)
+                return false;
+
+            return true;
         }
     }
 }
