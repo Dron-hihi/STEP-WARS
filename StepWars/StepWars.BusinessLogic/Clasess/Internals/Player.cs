@@ -1,4 +1,4 @@
-﻿using StepWars.BusinessLogic.Clasess.Inline;
+﻿using StepWars.BusinessLogic.Clasess.Internals;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -13,5 +13,6 @@ namespace StepWars.BusinessLogic.Clasess.Internals
         public StarShip Ship { get; set; }
         public bool AdminRules { get; set; }        
         public int Score { get; set; }
+        public string AdminPassword { get; set; }
     }
 }
