@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace WPF_User_Interface.ServiceReference {
+namespace WPF_User_Interface.AddItemService {
     using System.Runtime.Serialization;
     using System;
     
@@ -23,13 +23,16 @@ namespace WPF_User_Interface.ServiceReference {
         private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private WPF_User_Interface.ServiceReference.BonusDTO BonusField;
+        private WPF_User_Interface.AddItemService.BonusDTO BonusField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
         private int DamageField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
         private int HealthField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string ImageField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
         private string NameField;
@@ -48,7 +51,7 @@ namespace WPF_User_Interface.ServiceReference {
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public WPF_User_Interface.ServiceReference.BonusDTO Bonus {
+        public WPF_User_Interface.AddItemService.BonusDTO Bonus {
             get {
                 return this.BonusField;
             }
@@ -82,6 +85,19 @@ namespace WPF_User_Interface.ServiceReference {
                 if ((this.HealthField.Equals(value) != true)) {
                     this.HealthField = value;
                     this.RaisePropertyChanged("Health");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Image {
+            get {
+                return this.ImageField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.ImageField, value) != true)) {
+                    this.ImageField = value;
+                    this.RaisePropertyChanged("Image");
                 }
             }
         }
@@ -200,49 +216,63 @@ namespace WPF_User_Interface.ServiceReference {
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ServiceModel.ServiceContractAttribute(ConfigurationName="ServiceReference.IRegistrationContract")]
-    public interface IRegistrationContract {
+    [System.ServiceModel.ServiceContractAttribute(ConfigurationName="AddItemService.IAddItemContract")]
+    public interface IAddItemContract {
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IRegistrationContract/GetAllShips", ReplyAction="http://tempuri.org/IRegistrationContract/GetAllShipsResponse")]
-        WPF_User_Interface.ServiceReference.StarShipDTO[] GetAllShips();
+        [System.ServiceModel.OperationContractAttribute(IsOneWay=true, Action="http://tempuri.org/IAddItemContract/AddNewStarShip")]
+        void AddNewStarShip(WPF_User_Interface.AddItemService.StarShipDTO starShip);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IRegistrationContract/GetAllShips", ReplyAction="http://tempuri.org/IRegistrationContract/GetAllShipsResponse")]
-        System.Threading.Tasks.Task<WPF_User_Interface.ServiceReference.StarShipDTO[]> GetAllShipsAsync();
+        [System.ServiceModel.OperationContractAttribute(IsOneWay=true, Action="http://tempuri.org/IAddItemContract/AddNewStarShip")]
+        System.Threading.Tasks.Task AddNewStarShipAsync(WPF_User_Interface.AddItemService.StarShipDTO starShip);
+        
+        [System.ServiceModel.OperationContractAttribute(IsOneWay=true, Action="http://tempuri.org/IAddItemContract/RemoveStarShip")]
+        void RemoveStarShip(WPF_User_Interface.AddItemService.StarShipDTO starShip);
+        
+        [System.ServiceModel.OperationContractAttribute(IsOneWay=true, Action="http://tempuri.org/IAddItemContract/RemoveStarShip")]
+        System.Threading.Tasks.Task RemoveStarShipAsync(WPF_User_Interface.AddItemService.StarShipDTO starShip);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    public interface IRegistrationContractChannel : WPF_User_Interface.ServiceReference.IRegistrationContract, System.ServiceModel.IClientChannel {
+    public interface IAddItemContractChannel : WPF_User_Interface.AddItemService.IAddItemContract, System.ServiceModel.IClientChannel {
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    public partial class RegistrationContractClient : System.ServiceModel.ClientBase<WPF_User_Interface.ServiceReference.IRegistrationContract>, WPF_User_Interface.ServiceReference.IRegistrationContract {
+    public partial class AddItemContractClient : System.ServiceModel.ClientBase<WPF_User_Interface.AddItemService.IAddItemContract>, WPF_User_Interface.AddItemService.IAddItemContract {
         
-        public RegistrationContractClient() {
+        public AddItemContractClient() {
         }
         
-        public RegistrationContractClient(string endpointConfigurationName) : 
+        public AddItemContractClient(string endpointConfigurationName) : 
                 base(endpointConfigurationName) {
         }
         
-        public RegistrationContractClient(string endpointConfigurationName, string remoteAddress) : 
+        public AddItemContractClient(string endpointConfigurationName, string remoteAddress) : 
                 base(endpointConfigurationName, remoteAddress) {
         }
         
-        public RegistrationContractClient(string endpointConfigurationName, System.ServiceModel.EndpointAddress remoteAddress) : 
+        public AddItemContractClient(string endpointConfigurationName, System.ServiceModel.EndpointAddress remoteAddress) : 
                 base(endpointConfigurationName, remoteAddress) {
         }
         
-        public RegistrationContractClient(System.ServiceModel.Channels.Binding binding, System.ServiceModel.EndpointAddress remoteAddress) : 
+        public AddItemContractClient(System.ServiceModel.Channels.Binding binding, System.ServiceModel.EndpointAddress remoteAddress) : 
                 base(binding, remoteAddress) {
         }
         
-        public WPF_User_Interface.ServiceReference.StarShipDTO[] GetAllShips() {
-            return base.Channel.GetAllShips();
+        public void AddNewStarShip(WPF_User_Interface.AddItemService.StarShipDTO starShip) {
+            base.Channel.AddNewStarShip(starShip);
         }
         
-        public System.Threading.Tasks.Task<WPF_User_Interface.ServiceReference.StarShipDTO[]> GetAllShipsAsync() {
-            return base.Channel.GetAllShipsAsync();
+        public System.Threading.Tasks.Task AddNewStarShipAsync(WPF_User_Interface.AddItemService.StarShipDTO starShip) {
+            return base.Channel.AddNewStarShipAsync(starShip);
+        }
+        
+        public void RemoveStarShip(WPF_User_Interface.AddItemService.StarShipDTO starShip) {
+            base.Channel.RemoveStarShip(starShip);
+        }
+        
+        public System.Threading.Tasks.Task RemoveStarShipAsync(WPF_User_Interface.AddItemService.StarShipDTO starShip) {
+            return base.Channel.RemoveStarShipAsync(starShip);
         }
     }
 }

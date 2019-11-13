@@ -12,7 +12,8 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 using MahApps.Metro.Controls;
-using WPF_User_Interface.ServiceReference;
+using StepWars.Helpers.Extentions;
+using WPF_User_Interface.AddItemService;
 
 namespace UserInterface
 {
@@ -71,7 +72,10 @@ namespace UserInterface
             ship.Damage = DMG;
             ship.Health = HP;
             ship.Speed = SPE;
-            
+            ship.Image = Ico.ImageToString();
+
+            WPF_User_Interface.AddItemService.AddItemContractClient client = new AddItemContractClient();
+            client.AddNewStarShip(ship);
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)

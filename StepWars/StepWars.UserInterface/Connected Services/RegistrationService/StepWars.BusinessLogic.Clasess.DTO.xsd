@@ -11,6 +11,7 @@
       <xs:element minOccurs="0" name="Bonus" nillable="true" type="tns:BonusDTO" />
       <xs:element minOccurs="0" name="Damage" type="xs:int" />
       <xs:element minOccurs="0" name="Health" type="xs:int" />
+      <xs:element minOccurs="0" name="Image" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="Speed" type="xs:int" />
     </xs:sequence>

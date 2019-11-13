@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<SavedWcfConfigurationInformation xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Version="9.1" CheckSum="zOWeMWuhJ1m7LYvAl0vpuJ8sNaQ=">
+<SavedWcfConfigurationInformation xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Version="9.1" CheckSum="pgtqtn8kB07WVOzpy5SWJ8nWwtA=">
   <bindingConfigurations>
     <bindingConfiguration bindingType="basicHttpBinding" name="RegistrationEp">
       <properties>
@@ -112,7 +112,7 @@
     </bindingConfiguration>
   </bindingConfigurations>
   <endpoints>
-    <endpoint name="RegistrationEp" contract="ServiceReference.IRegistrationContract" bindingType="basicHttpBinding" address="http://localhost:8733/Design_Time_Addresses/StepWars/Registration" bindingConfiguration="RegistrationEp">
+    <endpoint name="RegistrationEp" contract="RegistrationService.IRegistrationContract" bindingType="basicHttpBinding" address="http://localhost:8733/Design_Time_Addresses/StepWars/Registration" bindingConfiguration="RegistrationEp">
       <properties>
         <property path="/address" isComplexType="false" isExplicitlyDefined="true" clrType="System.Uri, System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
           <serializedValue>http://localhost:8733/Design_Time_Addresses/StepWars/Registration</serializedValue>
@@ -127,7 +127,7 @@
           <serializedValue>RegistrationEp</serializedValue>
         </property>
         <property path="/contract" isComplexType="false" isExplicitlyDefined="true" clrType="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-          <serializedValue>ServiceReference.IRegistrationContract</serializedValue>
+          <serializedValue>RegistrationService.IRegistrationContract</serializedValue>
         </property>
         <property path="/headers" isComplexType="true" isExplicitlyDefined="false" clrType="System.ServiceModel.Configuration.AddressHeaderCollectionElement, System.ServiceModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
           <serializedValue>System.ServiceModel.Configuration.AddressHeaderCollectionElement</serializedValue>

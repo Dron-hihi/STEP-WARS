@@ -68,7 +68,17 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Compile Include="Connected Services\ServiceReference\Reference.cs">
+    <Compile Include="Connected Services\AddItemService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Connected Services\GameService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Connected Services\RegistrationService\Reference.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.svcmap</DependentUpon>
@@ -136,17 +146,40 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <None Include="Connected Services\ServiceReference\service.wsdl" />
-    <None Include="Connected Services\ServiceReference\service.xsd">
+    <None Include="Connected Services\AddItemService\service.wsdl" />
+    <None Include="Connected Services\AddItemService\service.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Connected Services\ServiceReference\service1.xsd">
+    <None Include="Connected Services\AddItemService\service1.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Connected Services\ServiceReference\StepWars.BusinessLogic.Clasess.DTO.xsd">
+    <None Include="Connected Services\AddItemService\StepWars.BusinessLogic.Clasess.DTO.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Connected Services\ServiceReference\WPF_User_Interface.ServiceReference.StarShipDTO.datasource">
+    <None Include="Connected Services\GameService\service.wsdl" />
+    <None Include="Connected Services\GameService\service.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\GameService\service1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\GameService\StepWars.BusinessLogic.Clasess.DTO.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\GameService\StepWars.BusinessLogic.Contracts.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\RegistrationService\service.wsdl" />
+    <None Include="Connected Services\RegistrationService\service.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\RegistrationService\service1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\RegistrationService\StepWars.BusinessLogic.Clasess.DTO.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\RegistrationService\WPF_User_Interface.RegistrationService.StarShipDTO.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="packages.config" />
@@ -168,21 +201,51 @@
       <Project>{8781e47c-ef15-4c06-9002-861adf93ba5d}</Project>
       <Name>StepWars.GameEngine</Name>
     </ProjectReference>
+    <ProjectReference Include="..\StepWars.Helpers\StepWars.Helpers.csproj">
+      <Project>{7A5A4F48-1215-4441-8FFB-7B03A408273B}</Project>
+      <Name>StepWars.Helpers</Name>
+    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <WCFMetadata Include="Connected Services\" />
   </ItemGroup>
   <ItemGroup>
-    <WCFMetadataStorage Include="Connected Services\ServiceReference\" />
+    <WCFMetadataStorage Include="Connected Services\AddItemService\" />
+    <WCFMetadataStorage Include="Connected Services\GameService\" />
+    <WCFMetadataStorage Include="Connected Services\RegistrationService\" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Connected Services\ServiceReference\configuration91.svcinfo" />
+    <None Include="Connected Services\AddItemService\configuration91.svcinfo" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Connected Services\ServiceReference\configuration.svcinfo" />
+    <None Include="Connected Services\AddItemService\configuration.svcinfo" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Connected Services\ServiceReference\Reference.svcmap">
+    <None Include="Connected Services\AddItemService\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\GameService\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\GameService\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\GameService\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\RegistrationService\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\RegistrationService\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\RegistrationService\Reference.svcmap">
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>

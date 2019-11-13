@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="550b924f-ad7a-4b79-9518-4648a0ed0916" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="7f1225c2-a606-4bf2-804a-9129bd3186ee" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
   <ClientOptions>
     <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
     <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
@@ -22,10 +22,10 @@
     <MetadataSource Address="http://localhost:8733/Design_Time_Addresses/StepWars/Registration/mex" Protocol="mex" SourceId="1" />
   </MetadataSources>
   <Metadata>
-    <MetadataFile FileName="service.wsdl" MetadataType="Wsdl" ID="f2f06514-753c-49f7-ae3f-7c377bde229a" SourceId="1" SourceUrl="http://localhost:8733/Design_Time_Addresses/StepWars/Registration/mex" />
-    <MetadataFile FileName="service.xsd" MetadataType="Schema" ID="603b89ff-dc21-4a4c-a00e-36790452e7dc" SourceId="1" SourceUrl="http://localhost:8733/Design_Time_Addresses/StepWars/Registration/mex" />
-    <MetadataFile FileName="service1.xsd" MetadataType="Schema" ID="8991202f-afee-4609-bca4-38912f03e9c3" SourceId="1" SourceUrl="http://localhost:8733/Design_Time_Addresses/StepWars/Registration/mex" />
-    <MetadataFile FileName="StepWars.BusinessLogic.Clasess.DTO.xsd" MetadataType="Schema" ID="e115fd93-d41d-4489-8a8c-4687c202a01d" SourceId="1" SourceUrl="http://localhost:8733/Design_Time_Addresses/StepWars/Registration/mex" />
+    <MetadataFile FileName="service.wsdl" MetadataType="Wsdl" ID="96c68c1a-d1ff-46b2-bb20-c94009f6f796" SourceId="1" SourceUrl="http://localhost:8733/Design_Time_Addresses/StepWars/Registration/mex" />
+    <MetadataFile FileName="service.xsd" MetadataType="Schema" ID="286cc9d3-0d2a-4ec4-a053-70df63d5e19d" SourceId="1" SourceUrl="http://localhost:8733/Design_Time_Addresses/StepWars/Registration/mex" />
+    <MetadataFile FileName="service1.xsd" MetadataType="Schema" ID="75cc3553-4586-40bf-bb26-26b5f5f578ae" SourceId="1" SourceUrl="http://localhost:8733/Design_Time_Addresses/StepWars/Registration/mex" />
+    <MetadataFile FileName="StepWars.BusinessLogic.Clasess.DTO.xsd" MetadataType="Schema" ID="01cb3a3d-d124-461d-904a-1a1ee2a043e3" SourceId="1" SourceUrl="http://localhost:8733/Design_Time_Addresses/StepWars/Registration/mex" />
   </Metadata>
   <Extensions>
     <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
