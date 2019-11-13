@@ -13,16 +13,92 @@
   <wsdl:message name="IRegistrationContract_GetAllShips_OutputMessage">
     <wsdl:part name="parameters" element="tns:GetAllShipsResponse" />
   </wsdl:message>
+  <wsdl:message name="IRegistrationContract_CheckToUserExist_InputMessage">
+    <wsdl:part name="parameters" element="tns:CheckToUserExist" />
+  </wsdl:message>
+  <wsdl:message name="IRegistrationContract_CheckToUserExist_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CheckToUserExistResponse" />
+  </wsdl:message>
+  <wsdl:message name="IRegistrationContract_CheckToAdminRules_InputMessage">
+    <wsdl:part name="parameters" element="tns:CheckToAdminRules" />
+  </wsdl:message>
+  <wsdl:message name="IRegistrationContract_CheckToAdminRules_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CheckToAdminRulesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IRegistrationContract_CheckToAdminPassword_InputMessage">
+    <wsdl:part name="parameters" element="tns:CheckToAdminPassword" />
+  </wsdl:message>
+  <wsdl:message name="IRegistrationContract_CheckToAdminPassword_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CheckToAdminPasswordResponse" />
+  </wsdl:message>
+  <wsdl:message name="IRegistrationContract_RegisterNewPlayer_InputMessage">
+    <wsdl:part name="parameters" element="tns:RegisterNewPlayer" />
+  </wsdl:message>
+  <wsdl:message name="IRegistrationContract_RegisterNewPlayer_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RegisterNewPlayerResponse" />
+  </wsdl:message>
   <wsdl:portType name="IRegistrationContract">
     <wsdl:operation name="GetAllShips">
       <wsdl:input wsaw:Action="http://tempuri.org/IRegistrationContract/GetAllShips" message="tns:IRegistrationContract_GetAllShips_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IRegistrationContract/GetAllShipsResponse" message="tns:IRegistrationContract_GetAllShips_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CheckToUserExist">
+      <wsdl:input wsaw:Action="http://tempuri.org/IRegistrationContract/CheckToUserExist" message="tns:IRegistrationContract_CheckToUserExist_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IRegistrationContract/CheckToUserExistResponse" message="tns:IRegistrationContract_CheckToUserExist_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CheckToAdminRules">
+      <wsdl:input wsaw:Action="http://tempuri.org/IRegistrationContract/CheckToAdminRules" message="tns:IRegistrationContract_CheckToAdminRules_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IRegistrationContract/CheckToAdminRulesResponse" message="tns:IRegistrationContract_CheckToAdminRules_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CheckToAdminPassword">
+      <wsdl:input wsaw:Action="http://tempuri.org/IRegistrationContract/CheckToAdminPassword" message="tns:IRegistrationContract_CheckToAdminPassword_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IRegistrationContract/CheckToAdminPasswordResponse" message="tns:IRegistrationContract_CheckToAdminPassword_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RegisterNewPlayer">
+      <wsdl:input wsaw:Action="http://tempuri.org/IRegistrationContract/RegisterNewPlayer" message="tns:IRegistrationContract_RegisterNewPlayer_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IRegistrationContract/RegisterNewPlayerResponse" message="tns:IRegistrationContract_RegisterNewPlayer_OutputMessage" />
     </wsdl:operation>
   </wsdl:portType>
   <wsdl:binding name="RegistrationEp" type="tns:IRegistrationContract">
     <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
     <wsdl:operation name="GetAllShips">
       <soap:operation soapAction="http://tempuri.org/IRegistrationContract/GetAllShips" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CheckToUserExist">
+      <soap:operation soapAction="http://tempuri.org/IRegistrationContract/CheckToUserExist" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CheckToAdminRules">
+      <soap:operation soapAction="http://tempuri.org/IRegistrationContract/CheckToAdminRules" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CheckToAdminPassword">
+      <soap:operation soapAction="http://tempuri.org/IRegistrationContract/CheckToAdminPassword" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RegisterNewPlayer">
+      <soap:operation soapAction="http://tempuri.org/IRegistrationContract/RegisterNewPlayer" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>

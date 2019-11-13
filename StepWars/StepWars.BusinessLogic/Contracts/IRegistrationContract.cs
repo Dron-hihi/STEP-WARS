@@ -20,12 +20,16 @@ namespace StepWars.BusinessLogic.Contracts
         [OperationContract]
         List<StarShipDTO> GetAllShips();
         // Функція, яка перевіряє чи вже є гравець з таким самим ніком в грі
+        [OperationContract]
         bool CheckToUserExist(string nickName);
         // Функція, яка перевіряє чи є в гравця права адміна
+        [OperationContract]
         bool CheckToAdminRules(string nickName);
         // Функція, яка перевіряє чи правильний адмін пароль
+        [OperationContract]
         bool CheckToAdminPassword(string password);
         // Функція, яка реєструє нового гравця.Повертає нашого гравця.
+        [OperationContract]
         PlayerDTO RegisterNewPlayer(string nickName, StarShipDTO startShip);
     }
 }

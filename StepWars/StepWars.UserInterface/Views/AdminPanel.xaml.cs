@@ -43,10 +43,17 @@ namespace UserInterface
 
         private void ADDShip_Ico_TextChanged(object sender, TextChangedEventArgs e)
         {
-            if (ADDShip_Ico.Text == "")
-                MessageBox.Show("Write the path to the icon");
-            else
-                Ico = System.Drawing.Image.FromFile((sender as TextBox).Text);
+            try
+            {
+                if (ADDShip_Ico.Text == "")
+                    MessageBox.Show("Write the path to the icon");
+                else
+                    Ico = System.Drawing.Image.FromFile((sender as TextBox).Text);
+            }
+            catch (Exception)
+            {
+            }
+            
         }
 
         private void Slid_Dmg_ValueChanged(object sender, RoutedPropertyChangedEventArgs<double> e)

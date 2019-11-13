@@ -25,4 +25,13 @@
     </xs:sequence>
   </xs:complexType>
   <xs:element name="BonusDTO" nillable="true" type="tns:BonusDTO" />
+  <xs:complexType name="PlayerDTO">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="AdminRules" type="xs:boolean" />
+      <xs:element minOccurs="0" name="NickName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Score" type="xs:int" />
+      <xs:element minOccurs="0" name="Ship" nillable="true" type="tns:StarShipDTO" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="PlayerDTO" nillable="true" type="tns:PlayerDTO" />
 </xs:schema>

@@ -33,6 +33,7 @@ namespace StepWars.BusinessLogic.Services
                     Name = ship.Name,
                     Damage = ship.Damage,
                     Health = ship.Health,
+                    Image = ship.Image,
                     Speed = ship.Speed
                 });
             }
@@ -54,6 +55,7 @@ namespace StepWars.BusinessLogic.Services
                 Name = starShip.Name,
                 Damage = starShip.Damage,
                 Health = starShip.Health,
+                Image = starShip.Image,
                 Speed = starShip.Speed
             });
         }

@@ -215,6 +215,99 @@ namespace WPF_User_Interface.RegistrationService {
         }
     }
     
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="PlayerDTO", Namespace="http://schemas.datacontract.org/2004/07/StepWars.BusinessLogic.Clasess.DTO")]
+    [System.SerializableAttribute()]
+    public partial class PlayerDTO : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+        
+        [System.NonSerializedAttribute()]
+        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private bool AdminRulesField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string NickNameField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int ScoreField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private WPF_User_Interface.RegistrationService.StarShipDTO ShipField;
+        
+        [global::System.ComponentModel.BrowsableAttribute(false)]
+        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
+            get {
+                return this.extensionDataField;
+            }
+            set {
+                this.extensionDataField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public bool AdminRules {
+            get {
+                return this.AdminRulesField;
+            }
+            set {
+                if ((this.AdminRulesField.Equals(value) != true)) {
+                    this.AdminRulesField = value;
+                    this.RaisePropertyChanged("AdminRules");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string NickName {
+            get {
+                return this.NickNameField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.NickNameField, value) != true)) {
+                    this.NickNameField = value;
+                    this.RaisePropertyChanged("NickName");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int Score {
+            get {
+                return this.ScoreField;
+            }
+            set {
+                if ((this.ScoreField.Equals(value) != true)) {
+                    this.ScoreField = value;
+                    this.RaisePropertyChanged("Score");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public WPF_User_Interface.RegistrationService.StarShipDTO Ship {
+            get {
+                return this.ShipField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.ShipField, value) != true)) {
+                    this.ShipField = value;
+                    this.RaisePropertyChanged("Ship");
+                }
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ServiceModel.ServiceContractAttribute(ConfigurationName="RegistrationService.IRegistrationContract")]
     public interface IRegistrationContract {
@@ -224,6 +317,30 @@ namespace WPF_User_Interface.RegistrationService {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IRegistrationContract/GetAllShips", ReplyAction="http://tempuri.org/IRegistrationContract/GetAllShipsResponse")]
         System.Threading.Tasks.Task<WPF_User_Interface.RegistrationService.StarShipDTO[]> GetAllShipsAsync();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IRegistrationContract/CheckToUserExist", ReplyAction="http://tempuri.org/IRegistrationContract/CheckToUserExistResponse")]
+        bool CheckToUserExist(string nickName);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IRegistrationContract/CheckToUserExist", ReplyAction="http://tempuri.org/IRegistrationContract/CheckToUserExistResponse")]
+        System.Threading.Tasks.Task<bool> CheckToUserExistAsync(string nickName);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IRegistrationContract/CheckToAdminRules", ReplyAction="http://tempuri.org/IRegistrationContract/CheckToAdminRulesResponse")]
+        bool CheckToAdminRules(string nickName);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IRegistrationContract/CheckToAdminRules", ReplyAction="http://tempuri.org/IRegistrationContract/CheckToAdminRulesResponse")]
+        System.Threading.Tasks.Task<bool> CheckToAdminRulesAsync(string nickName);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IRegistrationContract/CheckToAdminPassword", ReplyAction="http://tempuri.org/IRegistrationContract/CheckToAdminPasswordResponse")]
+        bool CheckToAdminPassword(string password);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IRegistrationContract/CheckToAdminPassword", ReplyAction="http://tempuri.org/IRegistrationContract/CheckToAdminPasswordResponse")]
+        System.Threading.Tasks.Task<bool> CheckToAdminPasswordAsync(string password);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IRegistrationContract/RegisterNewPlayer", ReplyAction="http://tempuri.org/IRegistrationContract/RegisterNewPlayerResponse")]
+        WPF_User_Interface.RegistrationService.PlayerDTO RegisterNewPlayer(string nickName, WPF_User_Interface.RegistrationService.StarShipDTO startShip);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IRegistrationContract/RegisterNewPlayer", ReplyAction="http://tempuri.org/IRegistrationContract/RegisterNewPlayerResponse")]
+        System.Threading.Tasks.Task<WPF_User_Interface.RegistrationService.PlayerDTO> RegisterNewPlayerAsync(string nickName, WPF_User_Interface.RegistrationService.StarShipDTO startShip);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -259,6 +376,38 @@ namespace WPF_User_Interface.RegistrationService {
         
         public System.Threading.Tasks.Task<WPF_User_Interface.RegistrationService.StarShipDTO[]> GetAllShipsAsync() {
             return base.Channel.GetAllShipsAsync();
+        }
+        
+        public bool CheckToUserExist(string nickName) {
+            return base.Channel.CheckToUserExist(nickName);
+        }
+        
+        public System.Threading.Tasks.Task<bool> CheckToUserExistAsync(string nickName) {
+            return base.Channel.CheckToUserExistAsync(nickName);
+        }
+        
+        public bool CheckToAdminRules(string nickName) {
+            return base.Channel.CheckToAdminRules(nickName);
+        }
+        
+        public System.Threading.Tasks.Task<bool> CheckToAdminRulesAsync(string nickName) {
+            return base.Channel.CheckToAdminRulesAsync(nickName);
+        }
+        
+        public bool CheckToAdminPassword(string password) {
+            return base.Channel.CheckToAdminPassword(password);
+        }
+        
+        public System.Threading.Tasks.Task<bool> CheckToAdminPasswordAsync(string password) {
+            return base.Channel.CheckToAdminPasswordAsync(password);
+        }
+        
+        public WPF_User_Interface.RegistrationService.PlayerDTO RegisterNewPlayer(string nickName, WPF_User_Interface.RegistrationService.StarShipDTO startShip) {
+            return base.Channel.RegisterNewPlayer(nickName, startShip);
+        }
+        
+        public System.Threading.Tasks.Task<WPF_User_Interface.RegistrationService.PlayerDTO> RegisterNewPlayerAsync(string nickName, WPF_User_Interface.RegistrationService.StarShipDTO startShip) {
+            return base.Channel.RegisterNewPlayerAsync(nickName, startShip);
         }
     }
 }

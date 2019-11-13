@@ -14,7 +14,6 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
-using WPF_User_Interface.ServiceReference;
 
 namespace UserInterface
 {
@@ -23,6 +22,8 @@ namespace UserInterface
     /// </summary>
     public partial class MainWindow : MetroWindow
     {
+        WPF_User_Interface.RegistrationService.RegistrationContractClient registrationService = new WPF_User_Interface.RegistrationService.RegistrationContractClient();
+
         public MainWindow()
         {
             InitializeComponent();
@@ -34,6 +35,8 @@ namespace UserInterface
             {
                 if (TB_NickName.Text != "")
                 {
+                    Login();
+
                     ShipSelect SelectedShip = new ShipSelect();
                     SelectedShip.Show();
                     this.Close();
@@ -62,5 +65,17 @@ namespace UserInterface
             }
 
         }
+
+        private void Login()
+        {
+            //registrationService.CheckToUserExist(TB_NickName)
+        }
+
+        private bool CheckToExist(string nickname)
+        {
+            return true;
+        }
+
+        
     }
 }

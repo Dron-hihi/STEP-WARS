@@ -22,11 +22,14 @@ namespace StepWars.BusinessLogic.Services
 
         public void AddNewStarShip(StarShipDTO starShip)
         {
+
             if (!CheckToStarShipExist(new StarShip()
             {
-                Name = starShip.Name             
+                Name = starShip.Name
             }))
                 return;
+
+
 
             service.AddStarShip(new StarShip()
             {
@@ -40,7 +43,7 @@ namespace StepWars.BusinessLogic.Services
 
         public void RemoveStarShip(StarShipDTO starShip)
         {
-            if(CheckToStarShipExist(new StarShip()
+            if (CheckToStarShipExist(new StarShip()
             {
                 Name = starShip.Name,
             }))
