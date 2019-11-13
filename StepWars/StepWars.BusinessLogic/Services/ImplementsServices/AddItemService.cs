@@ -27,7 +27,7 @@ namespace StepWars.BusinessLogic.Services
                 Name = starShip.Name             
             }))
                 return;
-            Image
+            
             service.AddStarShip(new StarShip()
             {
                 Name = starShip.Name,
