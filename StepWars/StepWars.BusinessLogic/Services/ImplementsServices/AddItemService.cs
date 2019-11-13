@@ -24,10 +24,10 @@ namespace StepWars.BusinessLogic.Services
         {
             if (!CheckToStarShipExist(new StarShip()
             {
-                Name = starShip.Name,                
+                Name = starShip.Name             
             }))
                 return;
-
+            Image
             service.AddStarShip(new StarShip()
             {
                 Name = starShip.Name,
