@@ -21,9 +21,51 @@ namespace UserInterface
     /// </summary>
     public partial class AdminPanel : MetroWindow
     {
+        private string ShipName;
+        private System.Drawing.Image Ico;
+        private int DMG;
+        private int HP;
+        private int SPE;
+
         public AdminPanel()
         {
             InitializeComponent();
+        }
+
+        private void TB_NameShip_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            if (TB_NameShip.Text == "")
+                MessageBox.Show("Enter Name Ship");
+            else
+                ShipName = (sender as TextBox).Text;
+        }
+
+        private void ADDShip_Ico_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            if (ADDShip_Ico.Text == "")
+                MessageBox.Show("Write the path to the icon");
+            else
+                Ico = System.Drawing.Image.FromFile((sender as TextBox).Text);
+        }
+
+        private void Slid_Dmg_ValueChanged(object sender, RoutedPropertyChangedEventArgs<double> e)
+        {
+            DMG = Convert.ToInt32((sender as Slider).Value);
+        }
+
+        private void Slid_HP_ValueChanged(object sender, RoutedPropertyChangedEventArgs<double> e)
+        {
+            HP = Convert.ToInt32((sender as Slider).Value);
+        }
+
+        private void Slid_Speed_ValueChanged(object sender, RoutedPropertyChangedEventArgs<double> e)
+        {
+            SPE = Convert.ToInt32((sender as Slider).Value);
+        }
+
+        private void ADD_Ship()
+        {
+
         }
     }
 }
