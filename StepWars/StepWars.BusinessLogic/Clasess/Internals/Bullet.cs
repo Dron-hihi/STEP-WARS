@@ -6,9 +6,8 @@ using System.Threading.Tasks;
 
 namespace StepWars.BusinessLogic.Clasess.Internals
 {
-    public class Bonus : DrawObject
+    public class Bullet : DrawObject
     {
-        public Action<StarShip> Effect { get; set; }
-        public int Duration { get; set; }
+        public int Damage { get; set; }
     }
 }

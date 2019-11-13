@@ -4,13 +4,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace StepWars.DataAccess.Enitites
+namespace StepWars.BusinessLogic.Clasess.Internals
 {
-    public class Enemy : BaseEntity
+    public class Enemy : DrawObject
     {
         public string Name { get; set; }
         public int Damage { get; set; }
         public int Hp { get; set; }
-        public string Image { get; set; }
     }
 }

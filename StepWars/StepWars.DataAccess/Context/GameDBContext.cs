@@ -14,5 +14,6 @@ namespace StepWars.DataAccess.Context
         public DbSet<User> Users { get; set; }
         public DbSet<Enemy> Enemies { get; set; }
         public DbSet<Kill> Kills { get; set; }
+        public DbSet<StarShip> StarShips { get; set; }
     }
 }

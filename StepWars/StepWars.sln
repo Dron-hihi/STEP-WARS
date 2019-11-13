@@ -15,6 +15,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StepWars.GameEngine", "Step
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StepWars.UserInterface", "StepWars.UserInterface\StepWars.UserInterface.csproj", "{C315EBE4-6A5C-4A85-80AB-8BF2C4785AA0}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StepWars.Helpers", "StepWars.Helpers\StepWars.Helpers.csproj", "{7A5A4F48-1215-4441-8FFB-7B03A408273B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -37,6 +39,10 @@ Global
 		{C315EBE4-6A5C-4A85-80AB-8BF2C4785AA0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C315EBE4-6A5C-4A85-80AB-8BF2C4785AA0}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C315EBE4-6A5C-4A85-80AB-8BF2C4785AA0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7A5A4F48-1215-4441-8FFB-7B03A408273B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7A5A4F48-1215-4441-8FFB-7B03A408273B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7A5A4F48-1215-4441-8FFB-7B03A408273B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7A5A4F48-1215-4441-8FFB-7B03A408273B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -46,6 +52,7 @@ Global
 		{F9399330-A1C5-4444-8FB9-6B2E81C0DED1} = {3CC3AD04-E7E9-4815-89F1-04CBD79B046E}
 		{8781E47C-EF15-4C06-9002-861ADF93BA5D} = {D391A092-9A7C-4A93-9ED9-E18490FE8B70}
 		{C315EBE4-6A5C-4A85-80AB-8BF2C4785AA0} = {D391A092-9A7C-4A93-9ED9-E18490FE8B70}
+		{7A5A4F48-1215-4441-8FFB-7B03A408273B} = {3CC3AD04-E7E9-4815-89F1-04CBD79B046E}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {969310DE-CB65-4850-A996-8AE5872A2365}

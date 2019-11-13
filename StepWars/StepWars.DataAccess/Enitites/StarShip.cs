@@ -6,11 +6,11 @@ using System.Threading.Tasks;
 
 namespace StepWars.DataAccess.Enitites
 {
-    public class Enemy : BaseEntity
+    public class StarShip : BaseEntity
     {
         public string Name { get; set; }
         public int Damage { get; set; }
-        public int Hp { get; set; }
-        public string Image { get; set; }
-    }
+        public int Health { get; set; }
+        public int Speed { get; set; }
+    }  
 }
