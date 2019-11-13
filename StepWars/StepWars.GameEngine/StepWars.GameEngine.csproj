@@ -90,5 +90,8 @@
   <ItemGroup>
     <Folder Include="ExitGameStatistic\" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BackWinForm.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

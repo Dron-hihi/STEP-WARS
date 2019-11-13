@@ -34,8 +34,9 @@
             // 
             // pictureBox1
             // 
-            this.pictureBox1.BackgroundImage = global::StepWars.GameEngine.Properties.Resources.LogoWinForm;
-            this.pictureBox1.Location = new System.Drawing.Point(12, 12);
+            this.pictureBox1.BackgroundImage = global::StepWars.GameEngine.Properties.Resources.BackWinForm;
+            this.pictureBox1.Location = new System.Drawing.Point(-1, 0);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(0);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(1024, 768);
             this.pictureBox1.TabIndex = 0;
@@ -45,9 +46,10 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.Green;
-            this.ClientSize = new System.Drawing.Size(1045, 797);
+            this.BackColor = System.Drawing.Color.Black;
+            this.ClientSize = new System.Drawing.Size(1023, 770);
             this.Controls.Add(this.pictureBox1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "StepWars";
             this.Text = "Step Wars";
             this.Load += new System.EventHandler(this.Form1_Load);

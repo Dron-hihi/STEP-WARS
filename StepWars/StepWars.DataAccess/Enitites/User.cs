@@ -11,5 +11,6 @@ namespace StepWars.DataAccess.Enitites
         public string NickName { get; set; }
         public string ShipName { get; set; }
         public bool AdminRules { get; set; }
+        public string AdminPassword { get; set; }
     }
 }
