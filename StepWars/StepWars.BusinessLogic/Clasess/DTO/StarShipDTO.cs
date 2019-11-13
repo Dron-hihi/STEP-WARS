@@ -12,6 +12,7 @@ namespace StepWars.BusinessLogic.Clasess.DTO
     public class StarShipDTO
     {
         [DataMember] public string Name { get; set; }
+        [DataMember] public string Image { get; set; }
         [DataMember] public int Damage { get; set; }
         [DataMember] public int Health { get; set; }
         [DataMember] public int Speed { get; set; }
