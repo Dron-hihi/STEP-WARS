@@ -7,7 +7,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace StepWars.BattleArena
+namespace StepWars.BattleArena 
 {
     public class RedrawHandler : IRedrawContract
     {

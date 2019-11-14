@@ -12,7 +12,7 @@ namespace StepWars.BusinessLogic.Contracts
     public enum MoveDirection { Up,Down,Left,Right }
 
     // Контракт де буде відбуватися уся ігрова логіка(пересування,стрільба,смерть,бонуси і т.д)
-    [ServiceContract(CallbackContract = typeof(IRedrawContract))]
+    [ServiceContract(CallbackContract = typeof(StepWars.BusinessLogic.Contracts.IRedrawContract))]
     public interface IGameControllerContract
     {
         // Додає нового гравця в гру
