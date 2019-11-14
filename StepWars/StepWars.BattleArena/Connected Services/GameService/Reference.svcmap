@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="0007268a-8a1b-45ba-8c31-ba2e7f079e5c" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="8cb196b1-5418-4ce4-b9c7-ae36c7f70416" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
   <ClientOptions>
     <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
     <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
@@ -22,11 +22,11 @@
     <MetadataSource Address="http://localhost:8733/Design_Time_Addresses/StepWars/Game/mex" Protocol="mex" SourceId="1" />
   </MetadataSources>
   <Metadata>
-    <MetadataFile FileName="service.wsdl" MetadataType="Wsdl" ID="50a48ac5-7871-44fa-8170-1fba3870a230" SourceId="1" SourceUrl="http://localhost:8733/Design_Time_Addresses/StepWars/Game/mex" />
-    <MetadataFile FileName="service.xsd" MetadataType="Schema" ID="55b1fb06-dc15-466a-92ad-a54a92006f23" SourceId="1" SourceUrl="http://localhost:8733/Design_Time_Addresses/StepWars/Game/mex" />
-    <MetadataFile FileName="service1.xsd" MetadataType="Schema" ID="3932e451-bbf4-4ad7-997c-0197d957c9f8" SourceId="1" SourceUrl="http://localhost:8733/Design_Time_Addresses/StepWars/Game/mex" />
-    <MetadataFile FileName="StepWars.BusinessLogic.Clasess.DTO.xsd" MetadataType="Schema" ID="69a6577e-1bc6-404b-b557-71a2d8fad2ab" SourceId="1" SourceUrl="http://localhost:8733/Design_Time_Addresses/StepWars/Game/mex" />
-    <MetadataFile FileName="StepWars.BusinessLogic.Contracts.xsd" MetadataType="Schema" ID="dd08b510-a60d-4f56-bc99-d48dd7d5fc4c" SourceId="1" SourceUrl="http://localhost:8733/Design_Time_Addresses/StepWars/Game/mex" />
+    <MetadataFile FileName="service.wsdl" MetadataType="Wsdl" ID="d4ce2d69-4e81-4bb2-8147-ed293fbd1b2a" SourceId="1" SourceUrl="http://localhost:8733/Design_Time_Addresses/StepWars/Game/mex" />
+    <MetadataFile FileName="service.xsd" MetadataType="Schema" ID="3e43c82e-af3a-40a9-8776-aaf037ed03e8" SourceId="1" SourceUrl="http://localhost:8733/Design_Time_Addresses/StepWars/Game/mex" />
+    <MetadataFile FileName="service1.xsd" MetadataType="Schema" ID="3bb75740-317a-44be-983f-da9a036289a6" SourceId="1" SourceUrl="http://localhost:8733/Design_Time_Addresses/StepWars/Game/mex" />
+    <MetadataFile FileName="StepWars.BusinessLogic.Clasess.DTO.xsd" MetadataType="Schema" ID="96b0626c-d2b5-44ac-aa4d-4bcc94152c56" SourceId="1" SourceUrl="http://localhost:8733/Design_Time_Addresses/StepWars/Game/mex" />
+    <MetadataFile FileName="StepWars.BusinessLogic.Contracts.xsd" MetadataType="Schema" ID="6e8972cb-63a4-48cf-8ce6-ec27b8bfa739" SourceId="1" SourceUrl="http://localhost:8733/Design_Time_Addresses/StepWars/Game/mex" />
   </Metadata>
   <Extensions>
     <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />

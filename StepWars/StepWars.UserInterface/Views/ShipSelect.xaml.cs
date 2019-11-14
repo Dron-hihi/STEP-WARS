@@ -62,12 +62,12 @@ namespace UserInterface
                 catch (Exception)
                 {
                 }
-               
+
             }
 
 
             LBPresentation.Items.Clear();
-            LBPresentation.ItemsSource = Ships;                      
+            LBPresentation.ItemsSource = Ships;
         }
 
         private void Battle_Start(object sender, RoutedEventArgs e)
@@ -80,19 +80,19 @@ namespace UserInterface
 
 
 
-            StepWars.GameEngine.StepWars form = new StepWars.GameEngine.StepWars(new StepWars.BusinessLogic.Clasess.DTO.PlayerDTO()
+            StepWars.BattleArena.Form1 form = new StepWars.BattleArena.Form1(new StepWars.BattleArena.GameService.PlayerDTO()
             {
                 AdminRules = registrationService.RegisterNewPlayer(playerNickName, selectedShip).AdminRules,
                 NickName = registrationService.RegisterNewPlayer(playerNickName, selectedShip).NickName,
                 Score = registrationService.RegisterNewPlayer(playerNickName, selectedShip).Score,
-                Ship = new StepWars.BusinessLogic.Clasess.DTO.StarShipDTO()
+                Ship = new StepWars.BattleArena.GameService.StarShipDTO()
                 {
                     Damage = registrationService.RegisterNewPlayer(playerNickName, selectedShip).Ship.Damage,
                     Health = registrationService.RegisterNewPlayer(playerNickName, selectedShip).Ship.Health,
                     Name = registrationService.RegisterNewPlayer(playerNickName, selectedShip).Ship.Name,
                     Speed = registrationService.RegisterNewPlayer(playerNickName, selectedShip).Ship.Speed,
                     Image = registrationService.RegisterNewPlayer(playerNickName, selectedShip).Ship.Image
-                } 
+                }
             });
             form.FormClosing += Form_FormClosing;
             form.ShowDialog();

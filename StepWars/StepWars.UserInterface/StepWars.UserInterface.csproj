@@ -200,6 +200,10 @@
     </Resource>
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\StepWars.BattleArena\StepWars.BattleArena.csproj">
+      <Project>{0862079d-be38-4855-9baa-f38b2f8b1e0d}</Project>
+      <Name>StepWars.BattleArena</Name>
+    </ProjectReference>
     <ProjectReference Include="..\StepWars.BusinessLogic\StepWars.BusinessLogic.csproj">
       <Project>{F9399330-A1C5-4444-8FB9-6B2E81C0DED1}</Project>
       <Name>StepWars.BusinessLogic</Name>

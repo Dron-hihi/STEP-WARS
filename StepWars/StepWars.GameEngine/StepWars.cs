@@ -1,5 +1,4 @@
-﻿using StepWars.BusinessLogic.Clasess.DTO;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -14,21 +13,21 @@ namespace StepWars.GameEngine
 {
     public partial class StepWars : Form
     {
-        PlayerDTO currentPlayer;
+        // currentPlayer;
 
         
 
-        public StepWars(PlayerDTO player)
+        public StepWars()
         {
-            InitializeComponent();
-
-
-            var context = new InstanceContext(new RedrawHandler());
-            var server = new GameService.GameControllerContractClient();
-
-            currentPlayer = player;
-            MessageBox.Show(player.NickName);
-            MessageBox.Show(player.Ship.Name);
+            //InitializeComponent();
+            //
+            //
+            //var context = new InstanceContext(new RedrawHandler());
+            //var server = new GameService.GameControllerContractClient();
+            //
+            //currentPlayer = player;
+            //MessageBox.Show(player.NickName);
+            //MessageBox.Show(player.Ship.Name);
 
 
         }
