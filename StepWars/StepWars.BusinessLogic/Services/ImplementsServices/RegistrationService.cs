@@ -97,7 +97,7 @@ namespace StepWars.BusinessLogic.Services
 
         public PlayerDTO RegisterNewPlayer(string nickName, StarShipDTO startShip)
         {
-            throw new NotImplementedException();
+            return new PlayerDTO() { NickName = nickName,Score = 0,AdminRules = false,Ship = startShip };
         }
     }
 }

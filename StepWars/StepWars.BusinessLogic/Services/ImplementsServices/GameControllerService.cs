@@ -10,6 +10,7 @@ using System.Linq;
 using System.ServiceModel;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace StepWars.BusinessLogic.Services
 {
@@ -20,6 +21,7 @@ namespace StepWars.BusinessLogic.Services
 
         public void AddNewPlayer(PlayerDTO player)
         {
+            MessageBox.Show("Connect to service");
             gameManager.ConnectPlayer(new UserCallbacks() {
                 NotificationsContract = OperationContext.Current.GetCallbackChannel<INotificationsContract>(),
                 RedrawContract = OperationContext.Current.GetCallbackChannel<IRedrawContract>(),

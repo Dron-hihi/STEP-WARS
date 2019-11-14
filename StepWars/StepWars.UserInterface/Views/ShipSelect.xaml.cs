@@ -1,5 +1,4 @@
 ﻿using MahApps.Metro.Controls;
-using StepWars.GameEngine;
 using StepWars.Helpers.Extentions;
 using System;
 using System.Collections.Generic;
@@ -26,7 +25,7 @@ namespace UserInterface
     public partial class ShipSelect : MetroWindow
     {
         private string playerNickName;
-        private StarShipDTO selectedShip;
+        private StarShipDTO selectedShip = new StarShipDTO();
 
         public List<ShipTemplate> Ships { get; set; }
 
@@ -72,7 +71,7 @@ namespace UserInterface
 
         private void Battle_Start(object sender, RoutedEventArgs e)
         {
-            var currShip = Ships.FirstOrDefault(x => x.ButtonTag == Convert.ToInt32((sender as Button).Content));
+            var currShip = Ships.FirstOrDefault(x => x.ButtonTag == Convert.ToInt16((sender as Button).Tag));
             selectedShip.Damage = currShip.Damage;
             selectedShip.Health = currShip.Health;
             selectedShip.Speed = currShip.Speed;
@@ -80,12 +79,12 @@ namespace UserInterface
 
 
 
-            StepWars.BattleArena.Form1 form = new StepWars.BattleArena.Form1(new StepWars.BattleArena.GameService.PlayerDTO()
+            StepWars.BattleArena.Form1 form = new StepWars.BattleArena.Form1(new StepWars.BusinessLogic.Clasess.DTO.PlayerDTO
             {
                 AdminRules = registrationService.RegisterNewPlayer(playerNickName, selectedShip).AdminRules,
                 NickName = registrationService.RegisterNewPlayer(playerNickName, selectedShip).NickName,
                 Score = registrationService.RegisterNewPlayer(playerNickName, selectedShip).Score,
-                Ship = new StepWars.BattleArena.GameService.StarShipDTO()
+                Ship = new StepWars.BusinessLogic.Clasess.DTO.StarShipDTO()
                 {
                     Damage = registrationService.RegisterNewPlayer(playerNickName, selectedShip).Ship.Damage,
                     Health = registrationService.RegisterNewPlayer(playerNickName, selectedShip).Ship.Health,

@@ -11,10 +11,10 @@ namespace StepWars.BusinessLogic.Contracts
 {
     // Контракт, який реалізовує гравець.
     // Використовується для перерисовки картинки
-    [ServiceContract]
     public interface IRedrawContract
     {
         // DrawObjects - усі об'єкти на карті.PlayerInfo - інформація про гравця
+        [OperationContract(IsOneWay = true)]
         void Redraw(List<DrawObjectDTO> DrawObjects,PlayerDTO playerInfo);
     }
 }

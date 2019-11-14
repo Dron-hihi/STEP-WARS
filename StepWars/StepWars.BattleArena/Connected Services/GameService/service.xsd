@@ -17,6 +17,11 @@
       </xs:sequence>
     </xs:complexType>
   </xs:element>
+  <xs:element name="MovePlayerResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
   <xs:element name="Shoot">
     <xs:complexType>
       <xs:sequence>
@@ -24,10 +29,23 @@
       </xs:sequence>
     </xs:complexType>
   </xs:element>
+  <xs:element name="ShootResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
   <xs:element name="RemovePlayer">
     <xs:complexType>
       <xs:sequence>
         <xs:element xmlns:q5="http://schemas.datacontract.org/2004/07/StepWars.BusinessLogic.Clasess.DTO" minOccurs="0" name="player" nillable="true" type="q5:PlayerDTO" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Redraw">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q6="http://schemas.datacontract.org/2004/07/StepWars.BusinessLogic.Clasess.DTO" minOccurs="0" name="DrawObjects" nillable="true" type="q6:ArrayOfDrawObjectDTO" />
+        <xs:element xmlns:q7="http://schemas.datacontract.org/2004/07/StepWars.BusinessLogic.Clasess.DTO" minOccurs="0" name="playerInfo" nillable="true" type="q7:PlayerDTO" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>

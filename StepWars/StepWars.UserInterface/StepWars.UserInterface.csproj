@@ -208,10 +208,6 @@
       <Project>{F9399330-A1C5-4444-8FB9-6B2E81C0DED1}</Project>
       <Name>StepWars.BusinessLogic</Name>
     </ProjectReference>
-    <ProjectReference Include="..\StepWars.GameEngine\StepWars.GameEngine.csproj">
-      <Project>{8781e47c-ef15-4c06-9002-861adf93ba5d}</Project>
-      <Name>StepWars.GameEngine</Name>
-    </ProjectReference>
     <ProjectReference Include="..\StepWars.Helpers\StepWars.Helpers.csproj">
       <Project>{7A5A4F48-1215-4441-8FFB-7B03A408273B}</Project>
       <Name>StepWars.Helpers</Name>

@@ -28,4 +28,18 @@
     </xs:sequence>
   </xs:complexType>
   <xs:element name="BonusDTO" nillable="true" type="tns:BonusDTO" />
+  <xs:complexType name="ArrayOfDrawObjectDTO">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="DrawObjectDTO" nillable="true" type="tns:DrawObjectDTO" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfDrawObjectDTO" nillable="true" type="tns:ArrayOfDrawObjectDTO" />
+  <xs:complexType name="DrawObjectDTO">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Image" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="X_Pos" type="xs:int" />
+      <xs:element minOccurs="0" name="Y_Pos" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="DrawObjectDTO" nillable="true" type="tns:DrawObjectDTO" />
 </xs:schema>

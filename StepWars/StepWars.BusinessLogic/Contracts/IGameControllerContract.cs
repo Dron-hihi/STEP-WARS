@@ -19,10 +19,10 @@ namespace StepWars.BusinessLogic.Contracts
         [OperationContract(IsOneWay = true)]
         void AddNewPlayer(PlayerDTO player);
         // Рухає персонажа
-        [OperationContract(IsOneWay = true)]
+        [OperationContract]
         void MovePlayer(PlayerDTO player, MoveDirection direction);
         // Стрільба
-        [OperationContract(IsOneWay = true)]
+        [OperationContract]
         void Shoot(PlayerDTO player);
         // Видаляє гравця з гри
         [OperationContract(IsOneWay = true)]
