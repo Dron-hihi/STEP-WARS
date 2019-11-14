@@ -110,12 +110,6 @@
     <None Include="Resources\LogoWinForm.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\StepWars.BusinessLogic\StepWars.BusinessLogic.csproj">
-      <Project>{F9399330-A1C5-4444-8FB9-6B2E81C0DED1}</Project>
-      <Name>StepWars.BusinessLogic</Name>
-    </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
     <WCFMetadataStorage Include="Connected Services\GameService\" />
   </ItemGroup>
   <ItemGroup>

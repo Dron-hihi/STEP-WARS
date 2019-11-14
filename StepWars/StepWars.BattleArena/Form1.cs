@@ -14,20 +14,17 @@ namespace StepWars.BattleArena
 {
     public partial class Form1 : Form
     {
-        BusinessLogic.Clasess.DTO.PlayerDTO player;
+        PlayerDTO player;
 
-        public Form1(BusinessLogic.Clasess.DTO.PlayerDTO Player)
+        public Form1(PlayerDTO Player)
         {
             InitializeComponent();
-
             player = Player;
 
             var context = new InstanceContext(new RedrawHandler(pictureBox1));
-            var server = new  GameControllerContractClient(context);            
+            var server = new  GameControllerContractClient(context);
 
             server.AddNewPlayer(player);
-
-            
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)

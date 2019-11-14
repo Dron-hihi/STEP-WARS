@@ -11,7 +11,6 @@ namespace StepWars.BusinessLogic.Clasess.Internals
     public class UserCallbacks
     {
         public IRedrawContract RedrawContract { get; set; }
-        public INotificationsContract NotificationsContract { get; set; }
         public Player Player { get; set; }
     }
 }

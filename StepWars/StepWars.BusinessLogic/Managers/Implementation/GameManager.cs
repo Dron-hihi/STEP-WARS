@@ -12,7 +12,6 @@ using System.Linq;
 using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
-using System.Windows.Forms;
 
 namespace StepWars.BusinessLogic.Managers
 {
@@ -55,13 +54,12 @@ namespace StepWars.BusinessLogic.Managers
 
         public bool ConnectPlayer(UserCallbacks user)
         {
-            MessageBox.Show("Connect");
             if (players.Count >= maxPlayers)
                 return false;
 
             players.Add(user);
-            players.ElementAt(players.Count - 1).NotificationsContract.StartGameNotification();
 
+            
 
 
             // Spawn
@@ -156,8 +154,7 @@ namespace StepWars.BusinessLogic.Managers
             {
                 players.Remove(user);
                 userService.RemoveUser(user.Player);
-                drawObjects.Remove(user.Player.Ship);
-                user.NotificationsContract.EndGameNotification();
+                drawObjects.Remove(user.Player.Ship);                
             }
         }
 

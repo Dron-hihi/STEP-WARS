@@ -10,7 +10,6 @@ using System.Linq;
 using System.ServiceModel;
 using System.Text;
 using System.Threading.Tasks;
-using System.Windows.Forms;
 
 namespace StepWars.BusinessLogic.Services
 {
@@ -21,27 +20,26 @@ namespace StepWars.BusinessLogic.Services
 
         public void AddNewPlayer(PlayerDTO player)
         {
-            MessageBox.Show("Connect to service");
-            gameManager.ConnectPlayer(new UserCallbacks() {
-                NotificationsContract = OperationContext.Current.GetCallbackChannel<INotificationsContract>(),
-                RedrawContract = OperationContext.Current.GetCallbackChannel<IRedrawContract>(),
-                Player = new Player() {
-                    NickName = player.NickName,
-                    AdminRules = player.AdminRules,
-                    Score = player.Score,
-                    Ship = new StarShip() {
-                        Name = player.Ship.Name,
-                        Damage = player.Ship.Damage,
-                        Health = player.Ship.Health,
-                        Speed = player.Ship.Speed,
-                        Image = player.Ship.Image,
-                        Bonus = new Bonus() {
-                            Duration = player.Ship.Bonus.Duration,
-                            Image = player.Ship.Bonus.Image
-                        } 
-                    } 
-                }
-            });
+            OperationContext.Current.GetCallbackChannel<IRedrawContract>().Redraw(null, null);
+            //gameManager.ConnectPlayer(new UserCallbacks() {              
+            //    RedrawContract = OperationContext.Current.GetCallbackChannel<IRedrawContract>(),
+            //    Player = new Player() {
+            //        NickName = player.NickName,
+            //        AdminRules = player.AdminRules,
+            //        Score = player.Score,
+            //        Ship = new StarShip() {
+            //            Name = player.Ship.Name,
+            //            Damage = player.Ship.Damage,
+            //            Health = player.Ship.Health,
+            //            Speed = player.Ship.Speed,
+            //            Image = player.Ship.Image,
+            //            Bonus = new Bonus() {
+            //                Duration = player.Ship.Bonus.Duration,
+            //                Image = player.Ship.Bonus.Image
+            //            } 
+            //        } 
+            //    }
+            //});
         }
 
         public void MovePlayer(PlayerDTO player, MoveDirection direction)
@@ -70,8 +68,7 @@ namespace StepWars.BusinessLogic.Services
         public void RemovePlayer(PlayerDTO player)
         {
             gameManager.RemovePlayer(new UserCallbacks()
-            {
-                NotificationsContract = OperationContext.Current.GetCallbackChannel<INotificationsContract>(),
+            {               
                 RedrawContract = OperationContext.Current.GetCallbackChannel<IRedrawContract>(),
                 Player = new Player()
                 {

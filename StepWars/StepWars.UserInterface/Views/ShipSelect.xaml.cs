@@ -79,20 +79,25 @@ namespace UserInterface
 
 
 
-            StepWars.BattleArena.Form1 form = new StepWars.BattleArena.Form1(new StepWars.BusinessLogic.Clasess.DTO.PlayerDTO
+
+            var currPlayer = registrationService.RegisterNewPlayer(playerNickName, selectedShip);
+            StepWars.BattleArena.Form1 form = new StepWars.BattleArena.Form1(new StepWars.BattleArena.GameService.PlayerDTO
             {
-                AdminRules = registrationService.RegisterNewPlayer(playerNickName, selectedShip).AdminRules,
-                NickName = registrationService.RegisterNewPlayer(playerNickName, selectedShip).NickName,
-                Score = registrationService.RegisterNewPlayer(playerNickName, selectedShip).Score,
-                Ship = new StepWars.BusinessLogic.Clasess.DTO.StarShipDTO()
+                AdminRules = currPlayer.AdminRules,
+                NickName = currPlayer.NickName,
+                Score = currPlayer.Score,
+                Ship = new StepWars.BattleArena.GameService.StarShipDTO()
                 {
-                    Damage = registrationService.RegisterNewPlayer(playerNickName, selectedShip).Ship.Damage,
-                    Health = registrationService.RegisterNewPlayer(playerNickName, selectedShip).Ship.Health,
-                    Name = registrationService.RegisterNewPlayer(playerNickName, selectedShip).Ship.Name,
-                    Speed = registrationService.RegisterNewPlayer(playerNickName, selectedShip).Ship.Speed,
-                    Image = registrationService.RegisterNewPlayer(playerNickName, selectedShip).Ship.Image
+                    Damage = currPlayer.Ship.Damage,
+                    Health = currPlayer.Ship.Health,
+                    Name = currPlayer.Ship.Name,
+                    Speed = currPlayer.Ship.Speed,
+                    Image = currPlayer.Ship.Image
                 }
             });
+            //StepWars.BattleArena.Form1 form = new StepWars.BattleArena.Form1(null);
+
+
             form.FormClosing += Form_FormClosing;
             form.ShowDialog();
             this.Close();
