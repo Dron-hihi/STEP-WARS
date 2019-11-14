@@ -35,15 +35,15 @@ namespace UserInterface
             {
                 if (TB_NickName.Text != "")
                 {
-                    Login();
+                    //Login();
 
-                    ShipSelect SelectedShip = new ShipSelect();
+                    ShipSelect SelectedShip = new ShipSelect(TB_NickName.Text);
                     SelectedShip.Show();
                     this.Close();
                 }
                 else
                 {
-                    MessageBox.Show("Enter your NICK NAME");
+                    MessageBox.Show("Enter nick name");
                 }
             }
             else if (RB_Admin.IsChecked == true)
@@ -56,19 +56,25 @@ namespace UserInterface
                 }
                 else
                 {
-                    MessageBox.Show("Enter your NICK NAME");
+                    MessageBox.Show("Enter nick name");
                 }
             }
             else
             {
-                MessageBox.Show("Визначiться Ви iгрок чи адмiнiстратор");
+                MessageBox.Show("Set player or admin");
             }
 
         }
 
         private void Login()
         {
-            //registrationService.CheckToUserExist(TB_NickName)
+            if(!registrationService.CheckToUserExist(TB_NickName.Text))
+            {
+                MessageBox.Show("Player alredy int game.");
+                return;
+            }
+
+
         }
 
         private bool CheckToExist(string nickname)

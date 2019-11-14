@@ -59,20 +59,37 @@ namespace StepWars.BusinessLogic.Services
 
             foreach (var ship in shipService.GetAllStarShips())
             {
-                ships.Add(new StarShipDTO()
+                if(ship.Bonus != null)
                 {
-                    Bonus = new BonusDTO()
+                    ships.Add(new StarShipDTO()
                     {
-                        Duration = ship.Bonus.Duration,
-                        Image = ship.Bonus.Image
-                    },
-                    Damage = ship.Damage,
-                    Name = ship.Name,
-                    Health = ship.Health,
-                    Image = ship.Image,
-                    Speed = ship.Speed
-                    
-                });
+                        Bonus = new BonusDTO()
+                        {
+                            Duration = ship.Bonus.Duration,
+                            Image = ship.Bonus.Image
+                        },
+                        Damage = ship.Damage,
+                        Name = ship.Name,
+                        Health = ship.Health,
+                        Image = ship.Image,
+                        Speed = ship.Speed
+
+                    });
+                }
+                else
+                {
+                    ships.Add(new StarShipDTO()
+                    {                       
+                        Damage = ship.Damage,
+                        Name = ship.Name,
+                        Health = ship.Health,
+                        Image = ship.Image,
+                        Speed = ship.Speed
+
+                    });
+                }
+
+                
             }
 
             return ships;

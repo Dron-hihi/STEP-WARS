@@ -88,6 +88,7 @@ namespace UserInterface
         private void Button_Click(object sender, RoutedEventArgs e)
         {
             Add_Ship();
+            MessageBox.Show("Done");
         }
     }
 }

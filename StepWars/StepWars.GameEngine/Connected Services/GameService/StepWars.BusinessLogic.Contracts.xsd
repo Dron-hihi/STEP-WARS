@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/StepWars.BusinessLogic.Contracts" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/StepWars.BusinessLogic.Contracts" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:simpleType name="MoveDirection">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Up" />
+      <xs:enumeration value="Down" />
+      <xs:enumeration value="Left" />
+      <xs:enumeration value="Right" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="MoveDirection" nillable="true" type="tns:MoveDirection" />
+</xs:schema>

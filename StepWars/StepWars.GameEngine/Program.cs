@@ -1,4 +1,5 @@
-﻿using System;
+﻿using StepWars.BusinessLogic.Clasess.DTO;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -16,7 +17,7 @@ namespace StepWars.GameEngine
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new StepWars());
-        }
+            Application.Run(new StepWars(null));
+        }      
     }
 }
